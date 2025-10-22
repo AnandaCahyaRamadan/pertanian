@@ -9,9 +9,11 @@ use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\UptExternalController;
 use App\Http\Controllers\InovasiLayananController;
 use App\Http\Controllers\OrganisasiController;
+use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VisiController;
+use App\Models\Pegawai;
 
 // Route utama
 Route::get('/', function () {
@@ -109,3 +111,11 @@ Route::post('/dashboard/users/store', [UserController::class, 'store'])->name('u
 Route::get('/dashboard/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
 Route::put('/dashboard/users/{id}', [UserController::class, 'update'])->name('users.update');
 Route::delete('/dashboard/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
+
+// pegwai
+Route::get('/dashboard/pegawai', [PegawaiController::class, 'index'])->name('pegawai.index');
+Route::get('/dashboard/pegawai/create', [PegawaiController::class, 'create'])->name('pegawai.create');
+Route::post('/dashboard/pegawai/store', [PegawaiController::class, 'store'])->name('pegawai.store');
+Route::get('/dashboard/pegawai/{id}/edit', [PegawaiController::class, 'edit'])->name('pegawai.edit');
+Route::put('/dashboard/pegawai/{id}', [PegawaiController::class, 'update'])->name('pegawai.update');
+Route::delete('/dashboard/pegawai/{id}', [PegawaiController::class, 'destroy'])->name('pegawai.destroy');
