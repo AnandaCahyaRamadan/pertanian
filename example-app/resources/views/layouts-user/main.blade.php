@@ -6,9 +6,13 @@
     <title>Pertanian Maju</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
         }
 
         .topbar a {
@@ -125,19 +129,19 @@
         }
 
         footer {
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #292929;
+            color: #727272;
             padding: 60px 0 20px;
         }
 
         footer h5 {
-            color: #198754;
+            color: rgb(248, 248, 248);
             margin-bottom: 20px;
-            font-weight: 600;
+            font-weight: 300;
         }
 
-        footer a {
-            color: #555;
+        footer a,p, h3 {
+            color: #7e7e7e;
             text-decoration: none;
         }
 
@@ -154,13 +158,14 @@
         }
 
         .social-icon {
-            color: #198754;
-            font-size: 1.3rem;
-            margin-right: 10px;
+            display:inline-block;
+            color:#fff;
+            margin-right:10px;
+            font-size:20px;
+            transition:0.3s;
         }
-
         .social-icon:hover {
-            color: #0d6efd;
+            color:#1abc9c;
         }
     </style>
 </head>
