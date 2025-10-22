@@ -40,7 +40,7 @@ class PegawaiController extends Controller
             'rank' => 'required|string|max:100',
             'gol' => 'required|string|max:50',
             'no_wa' => 'required|string|max:20',
-            'unit_kerja' => 'required|string|max:255',
+            'unit_kerja' => 'nullable|string|max:255',
             'ttdx' => 'nullable|string|max:255',
             'user_id' => 'required|exists:users,id',
         ]);
@@ -78,7 +78,7 @@ class PegawaiController extends Controller
             'rank' => 'required|string|max:100',
             'gol' => 'required|string|max:50',
             'no_wa' => 'required|string|max:20',
-            'unit_kerja' => 'required|string|max:255',
+            'unit_kerja' => 'nullable|string|max:255',
             'ttdx' => 'nullable|string|max:255',
             'user_id' => 'required|exists:users,id',
         ]);
