@@ -14,7 +14,8 @@ use App\Http\Controllers\{
     SocialMediaController,
     UptExternalController,
     InovasiLayananController,
-    SaranaPrasaranaController
+    SaranaPrasaranaController,
+    SaranaPrasaranaSliderController
 };
 
 // Route utama (bebas diakses)
@@ -154,4 +155,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/sarana-prasarana/edit/{id}', [SaranaPrasaranaController::class, 'edit'])->name('sarana_prasarana.edit');
     Route::put('/dashboard/sarana-prasarana/update/{id}', [SaranaPrasaranaController::class, 'update'])->name('sarana_prasarana.update');
     Route::delete('/dashboard/sarana-prasarana/delete/{id}', [SaranaPrasaranaController::class, 'destroy'])->name('sarana_prasarana.destroy');
+    // =============================
+    // SARANA PRASARANA SLIDER
+    // =============================
+    Route::get('/dashboard/saranaprasarana-slider', [SaranaPrasaranaSliderController::class, 'index'])->name('sarana_prasarana_slider.index');
+    Route::get('/dashboard/saranaprasarana-slider/create', [SaranaPrasaranaSliderController::class, 'create'])->name('sarana_prasarana_slider.create');
+    Route::post('/dashboard/saranaprasarana-slider/store', [SaranaPrasaranaSliderController::class, 'store'])->name('sarana_prasarana_slider.store');
+    Route::get('/dashboard/saranaprasarana-slider/edit/{id}', [SaranaPrasaranaSliderController::class, 'edit'])->name('sarana_prasarana_slider.edit');
+    Route::put('/dashboard/saranaprasarana-slider/update/{id}', [SaranaPrasaranaSliderController::class, 'update'])->name('sarana_prasarana_slider.update');
+    Route::delete('/dashboard/saranaprasarana-slider/delete/{id}', [SaranaPrasaranaSliderController::class, 'destroy'])->name('sarana_prasarana_slider.destroy');
 });

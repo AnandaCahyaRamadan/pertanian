@@ -20,8 +20,8 @@
         </li>
 
         <!-- Sarana & Prasarana -->
-       <li class="nav-item {{ Request::is('dashboard/sarana-prasarana*') ? 'menu-open' : '' }}">
-          <a href="#" class="nav-link {{ Request::is('dashboard/sarana-prasarana*') ? '' : '' }}">
+       <li class="nav-item {{ Request::is('dashboard/sarana-prasarana*') ||  Request::is('dashboard/saranaprasarana-slider*') ? 'menu-open' : '' }}">
+          <a href="#" class="nav-link {{ Request::is('dashboard/sarana-prasarana*') ||  Request::is('dashboard/saranaprasarana-slider*') ? 'active' : '' }}">
               <i class="nav-icon fas fa-warehouse"></i>
               <p>
                   Sarana Prasarana
@@ -36,7 +36,7 @@
                   </a>
               </li>
               <li class="nav-item">
-                  <a href="sarana_prasarana_img_scroll.html" class="nav-link">
+                  <a href="{{ route('sarana_prasarana_slider.index') }}" class="nav-link {{ Request::is('dashboard/saranaprasarana-slider*') ? 'active' : '' }}">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Gambar Slider</p>
                   </a>
