@@ -21,28 +21,26 @@
     <li class="nav-item dropdown user-menu">
       <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
         <img src="{{ asset ('dist/img/user2-160x160.jpg') }}" class="user-image img-circle elevation-2" alt="User Image">
-        <span class="d-none d-md-inline">Administrator</span>
+        <span class="d-none d-md-inline">{{ Auth::user()->name }}</span>
       </a>
       <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         <li class="user-header bg-primary">
           <img src="{{ asset ('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
-          <p>Administrator</p>
+          <p>{{ Auth::user()->name }}</p>
         </li>
 
         <li class="user-footer">
-          <a href="#" class="btn btn-default btn-flat text-danger float-right" onclick="logout()">
-            <i class="fas fa-sign-out-alt"></i> Logout
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+          </form>
+
+          <a href="#" class="btn btn-default btn-flat text-danger float-right"
+            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+              <i class="fas fa-sign-out-alt"></i> Logout
           </a>
-        </li>
+      </li>
       </ul>
     </li>
   </ul>
 </nav>
 
-<script>
-  function logout() {
-    if (confirm('Yakin ingin logout?')) {
-      window.location.href = '/logout';
-    }
-  }
-</script>
