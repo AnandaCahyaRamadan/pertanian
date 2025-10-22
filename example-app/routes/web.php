@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\BannerController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BannerController;
 
+use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\UptExternalController;
 use App\Http\Controllers\InovasiLayananController;
 
@@ -46,3 +47,11 @@ Route::post('/dashboard/banner/store', [BannerController::class, 'store'])->name
 Route::get('/dashboard/banner/edit/{id}', [BannerController::class, 'edit'])->name('banner.edit');
 Route::put('/dashboard/banner/update/{id}', [BannerController::class, 'update'])->name('banner.update');
 Route::delete('/dashboard/banner/delete/{id}', [BannerController::class, 'destroy'])->name('banner.destroy');
+
+// Social Media
+Route::get('/dashboard/social-media', [SocialMediaController::class, 'index'])->name('social_media.index');
+Route::get('/dashboard/social-media/create', [SocialMediaController::class, 'create'])->name('social_media.create');
+Route::post('/dashboard/social-media/store', [SocialMediaController::class, 'store'])->name('social_media.store');
+Route::get('/dashboard/social-media/edit/{id}', [SocialMediaController::class, 'edit'])->name('social_media.edit');
+Route::put('/dashboard/social-media/update/{id}', [SocialMediaController::class, 'update'])->name('social_media.update');
+Route::delete('/dashboard/social-media/delete/{id}', [SocialMediaController::class, 'destroy'])->name('social_media.destroy');
