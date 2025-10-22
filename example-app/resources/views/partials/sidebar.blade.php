@@ -1,9 +1,8 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
-  <a href="index.html" class="brand-link">
-    <img src="{{ asset ('dist/img/AdminLTELogo.png') }}" alt="Logo" class="brand-image img-circle elevation-3" style="opacity:.8">
-    <span class="brand-text font-weight-light">BBPP Ketindan</span>
+  <a href="#" class="brand-link">
+    <img src="{{ asset('image/binuang.png') }}" alt="" style="width: 200px">
   </a>
 
   <!-- Sidebar -->
@@ -39,7 +38,7 @@
               <li class="nav-item">
                   <a href="sarana_prasarana_img_scroll.html" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Gambar Scroll</p>
+                      <p>Gambar Slider</p>
                   </a>
               </li>
           </ul>
@@ -67,7 +66,7 @@
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-folder-open"></i>
             <p>
-              Dokumen PPID
+              Data PPID
               <i class="fas fa-angle-left right"></i>
             </p>
           </a>

@@ -3,7 +3,7 @@
 @section('content')
 <div class="login-box">
   <div class="login-logo">
-    <a href=""><b>Admin</b>LTE</a>
+    <img src="{{ asset('image/binuang.png') }}" alt="" style="width: 200px">
   </div>
   <div class="card">
     <div class="card-body login-card-body">
