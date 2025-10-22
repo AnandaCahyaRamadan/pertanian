@@ -9,6 +9,7 @@ use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\UptExternalController;
 use App\Http\Controllers\InovasiLayananController;
 use App\Http\Controllers\OrganisasiController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\VisiController;
 
 // Route utama
@@ -92,3 +93,10 @@ Route::get('/dashboard/organisasi/{id}/edit', [OrganisasiController::class, 'edi
 Route::put('/dashboard/organisasi/{id}', [OrganisasiController::class, 'update'])->name('organisasi.update');
 Route::delete('/dashboard/organisasi/{id}', [OrganisasiController::class, 'destroy'])->name('organisasi.destroy');
 
+// role
+Route::get('/dashboard/roles', [RoleController::class, 'index'])->name('roles.index');
+Route::get('/dashboard/roles/create', [RoleController::class, 'create'])->name('roles.create');
+Route::post('/dashboard/roles/store', [RoleController::class, 'store'])->name('roles.store');
+Route::get('/dashboard/roles/{id}/edit', [RoleController::class, 'edit'])->name('roles.edit');
+Route::put('/dashboard/roles/{id}', [RoleController::class, 'update'])->name('roles.update');
+Route::delete('/dashboard/roles/{id}', [RoleController::class, 'destroy'])->name('roles.destroy');
