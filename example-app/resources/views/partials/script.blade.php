@@ -41,7 +41,7 @@
     $(document).ready(function() {
       $('#desc').summernote({
         height: 200,
-        placeholder: 'Tulis deskripsi tentang lembaga...',
+        placeholder: 'Tulis deskripsi..',
         toolbar: [
           ['style', ['bold', 'italic', 'underline', 'clear']],
           ['para', ['ul', 'ol', 'paragraph']],

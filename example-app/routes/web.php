@@ -8,6 +8,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\UptExternalController;
 use App\Http\Controllers\InovasiLayananController;
+use App\Http\Controllers\VisiController;
 
 // Route utama
 Route::get('/', function () {
@@ -73,4 +74,12 @@ Route::post('/dashboard/task/store', [TaskController::class, 'store'])->name('ta
 Route::get('/dashboard/task/{id}/edit', [TaskController::class, 'edit'])->name('task.edit');
 Route::put('/dashboard/task/{id}', [TaskController::class, 'update'])->name('task.update');
 Route::delete('/dashboard/task/{id}', [TaskController::class, 'destroy'])->name('task.destroy');
+
+// task
+Route::get('/dashboard/visi', [VisiController::class, 'index'])->name('visi.index');
+Route::get('/dashboard/visi/create', [VisiController::class, 'create'])->name('visi.create');
+Route::post('/dashboard/visi/store', [VisiController::class, 'store'])->name('visi.store');
+Route::get('/dashboard/visi/{id}/edit', [VisiController::class, 'edit'])->name('visi.edit');
+Route::put('/dashboard/visi/{id}', [VisiController::class, 'update'])->name('visi.update');
+Route::delete('/dashboard/visi/{id}', [VisiController::class, 'destroy'])->name('visi.destroy');
 
