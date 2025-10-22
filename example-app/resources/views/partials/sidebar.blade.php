@@ -14,7 +14,7 @@
 
         <!-- Dashboard -->
         <li class="nav-item">
-          <a href="dashboard.html" class="nav-link active">
+          <a href="/dashboard" class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>Dashboard</p>
           </a>
@@ -102,8 +102,8 @@
         <li class="nav-item"><a href="tentang.html" class="nav-link"><i class="nav-icon fas fa-info-circle"></i><p>Tentang</p></a></li>
         <li class="nav-item"><a href="pegawai.html" class="nav-link"><i class="nav-icon fas fa-users"></i><p>Pegawai</p></a></li>
         <li class="nav-item"><a href="banner.html" class="nav-link"><i class="nav-icon fas fa-images"></i><p>Banner</p></a></li>
-        <li class="nav-item"><a href="upt_external.html" class="nav-link"><i class="nav-icon fas fa-link"></i><p>UPT External</p></a></li>
-        <li class="nav-item"><a href="{{ route('inovasi_layanan.index') }}" class="nav-link"><i class="nav-icon fas fa-lightbulb"></i><p>Inovasi Layanan</p></a></li>
+        <li class="nav-item"><a href="{{ route('upt_external.index') }}" class="nav-link {{ Request::is('dashboard/upt-external*') ? 'active' : '' }}"><i class="nav-icon fas fa-link"></i><p>UPT External</p></a></li>
+        <li class="nav-item mb-4"><a href="{{ route('inovasi_layanan.index') }}" class="nav-link {{ Request::is('dashboard/inovasi-layanan*') ? 'active' : '' }}"><i class="nav-icon fas fa-lightbulb"></i><p>Inovasi Layanan</p></a></li>
       </ul>
     </nav>
     <!-- /.sidebar-menu -->
