@@ -1,186 +1,125 @@
 <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a href="index.html" class="brand-link">
+    <img src="dist/img/AdminLTELogo.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity:.8">
+    <span class="brand-text font-weight-light">BBPP Ketindan</span>
+  </a>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
-        </div>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
       </div>
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
-              <p>
-                UI Elements
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>General</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/icons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Icons</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/buttons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Buttons</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/sliders.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Sliders</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/modals.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Modals & Alerts</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/navbar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Navbar & Tabs</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/timeline.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Timeline</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/ribbons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Ribbons</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Forms
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>General Elements</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Advanced Elements</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Editors</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/validation.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Validation</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Tables
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Simple Tables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>DataTables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/jsgrid.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>jsGrid</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-header">MASTER DATA</li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-search"></i>
-              <p>
-                Search
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/search/simple.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Simple Search</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/search/enhanced.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Enhanced</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
+      <div class="info">
+        <a href="#" class="d-block">Administrator</a>
+      </div>
     </div>
-    <!-- /.sidebar -->
-  </aside>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+
+        <!-- Dashboard -->
+        <li class="nav-item">
+          <a href="dashboard.html" class="nav-link active">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>Dashboard</p>
+          </a>
+        </li>
+
+        <!-- Data Pelatihan -->
+        <li class="nav-header">DATA PELATIHAN</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-graduation-cap"></i>
+            <p>
+              Penyelenggara Pelatihan
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item"><a href="penyelenggara_pelatihan.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Data Penyelenggara</p></a></li>
+            <li class="nav-item"><a href="jenis_sertifikasi.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Jenis Sertifikasi</p></a></li>
+            <li class="nav-item"><a href="skema_sertifikasi.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Skema Sertifikasi</p></a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="agenda_kegiatan.html" class="nav-link">
+            <i class="nav-icon fas fa-calendar-alt"></i>
+            <p>Agenda Kegiatan</p>
+          </a>
+        </li>
+
+        <!-- Sarana & Prasarana -->
+        <li class="nav-header">SARANA & PRASARANA</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-warehouse"></i>
+            <p>
+              Sarana Prasarana
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item"><a href="sarana_prasarana.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Data Sarana</p></a></li>
+            <li class="nav-item"><a href="sarana_prasarana_img_scroll.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Gambar Scroll</p></a></li>
+          </ul>
+        </li>
+
+        <!-- Program dan Anggaran -->
+        <li class="nav-header">PROGRAM & ANGGARAN</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-file-invoice-dollar"></i>
+            <p>
+              Program & Anggaran
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item"><a href="master_jenis_program_anggaran.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Master Jenis Program</p></a></li>
+            <li class="nav-item"><a href="program_anggaran.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Data Program Anggaran</p></a></li>
+          </ul>
+        </li>
+
+        <!-- PPID -->
+        <li class="nav-header">PPID</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-folder-open"></i>
+            <p>
+              Dokumen PPID
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item"><a href="master_dokumen_ppid.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Master Dokumen</p></a></li>
+            <li class="nav-item"><a href="dokumen_ppid.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Data Dokumen</p></a></li>
+            <li class="nav-item"><a href="infografis_ppid.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Infografis PPID</p></a></li>
+          </ul>
+        </li>
+
+        <!-- Master Data -->
+        <li class="nav-header">MASTER DATA</li>
+        <li class="nav-item"><a href="user.html" class="nav-link"><i class="nav-icon fas fa-user"></i><p>User</p></a></li>
+        <li class="nav-item"><a href="roles.html" class="nav-link"><i class="nav-icon fas fa-user-shield"></i><p>Roles</p></a></li>
+        <li class="nav-item"><a href="organisasi.html" class="nav-link"><i class="nav-icon fas fa-building"></i><p>Organisasi</p></a></li>
+        <li class="nav-item"><a href="tugas.html" class="nav-link"><i class="nav-icon fas fa-tasks"></i><p>Tugas</p></a></li>
+        <li class="nav-item"><a href="visi.html" class="nav-link"><i class="nav-icon fas fa-eye"></i><p>Visi</p></a></li>
+        <li class="nav-item"><a href="tentang.html" class="nav-link"><i class="nav-icon fas fa-info-circle"></i><p>Tentang</p></a></li>
+        <li class="nav-item"><a href="pegawai.html" class="nav-link"><i class="nav-icon fas fa-users"></i><p>Pegawai</p></a></li>
+
+        <!-- Konten Eksternal -->
+        <li class="nav-header">KONTEN EKSTERNAL</li>
+        <li class="nav-item"><a href="banner.html" class="nav-link"><i class="nav-icon fas fa-images"></i><p>Banner</p></a></li>
+        <li class="nav-item"><a href="upt_external.html" class="nav-link"><i class="nav-icon fas fa-link"></i><p>UPT External</p></a></li>
+        <li class="nav-item"><a href="inovasi_layanan.html" class="nav-link"><i class="nav-icon fas fa-lightbulb"></i><p>Inovasi Layanan</p></a></li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
