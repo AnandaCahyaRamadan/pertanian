@@ -2,7 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="index.html" class="brand-link">
-    <img src="dist/img/AdminLTELogo.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity:.8">
+    <img src="{{ asset ('dist/img/AdminLTELogo.png') }}" alt="Logo" class="brand-image img-circle elevation-3" style="opacity:.8">
     <span class="brand-text font-weight-light">BBPP Ketindan</span>
   </a>
 
@@ -101,12 +101,9 @@
         <li class="nav-item"><a href="visi.html" class="nav-link"><i class="nav-icon fas fa-eye"></i><p>Visi</p></a></li>
         <li class="nav-item"><a href="tentang.html" class="nav-link"><i class="nav-icon fas fa-info-circle"></i><p>Tentang</p></a></li>
         <li class="nav-item"><a href="pegawai.html" class="nav-link"><i class="nav-icon fas fa-users"></i><p>Pegawai</p></a></li>
-
-        <!-- Konten Eksternal -->
-        <li class="nav-header">KONTEN EKSTERNAL</li>
         <li class="nav-item"><a href="banner.html" class="nav-link"><i class="nav-icon fas fa-images"></i><p>Banner</p></a></li>
         <li class="nav-item"><a href="upt_external.html" class="nav-link"><i class="nav-icon fas fa-link"></i><p>UPT External</p></a></li>
-        <li class="nav-item"><a href="inovasi_layanan.html" class="nav-link"><i class="nav-icon fas fa-lightbulb"></i><p>Inovasi Layanan</p></a></li>
+        <li class="nav-item"><a href="{{ route('inovasi_layanan.index') }}" class="nav-link"><i class="nav-icon fas fa-lightbulb"></i><p>Inovasi Layanan</p></a></li>
       </ul>
     </nav>
     <!-- /.sidebar-menu -->

@@ -140,7 +140,7 @@
             font-weight: 300;
         }
 
-        footer a,p, h3 {
+    footer a,p, h3 {
             color: #7e7e7e;
             text-decoration: none;
         }
