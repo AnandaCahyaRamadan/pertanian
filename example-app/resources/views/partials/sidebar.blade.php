@@ -94,7 +94,7 @@
 
         <!-- Master Data -->
         <li class="nav-header">MASTER DATA</li>
-        <li class="nav-item"><a href="user.html" class="nav-link"><i class="nav-icon fas fa-user"></i><p>User</p></a></li>
+        <li class="nav-item"><a href="{{ route('users.index') }}" class="nav-link {{ Request::is('dashboard/users*') ? 'active' : '' }}"><i class="nav-icon fas fa-user"></i><p>User</p></a></li>
         <li class="nav-item"><a href="{{ route('roles.index') }}" class="nav-link {{ Request::is('dashboard/roles*') ? 'active' : '' }}"><i class="nav-icon fas fa-user-shield"></i><p>Role</p></a></li>
         <li class="nav-item"><a href="{{ route('organisasi.index') }}" class="nav-link {{ Request::is('dashboard/organisasi*') ? 'active' : '' }}"><i class="nav-icon fas fa-building"></i><p>Organisasi</p></a></li>
         <li class="nav-item"><a href="{{ route('task.index') }}" class="nav-link {{ Request::is('dashboard/task*') ? 'active' : '' }}"><i class="nav-icon fas fa-tasks"></i><p>Tugas</p></a></li>

@@ -10,6 +10,7 @@ use App\Http\Controllers\UptExternalController;
 use App\Http\Controllers\InovasiLayananController;
 use App\Http\Controllers\OrganisasiController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\VisiController;
 
 // Route utama
@@ -100,3 +101,11 @@ Route::post('/dashboard/roles/store', [RoleController::class, 'store'])->name('r
 Route::get('/dashboard/roles/{id}/edit', [RoleController::class, 'edit'])->name('roles.edit');
 Route::put('/dashboard/roles/{id}', [RoleController::class, 'update'])->name('roles.update');
 Route::delete('/dashboard/roles/{id}', [RoleController::class, 'destroy'])->name('roles.destroy');
+
+// users
+Route::get('/dashboard/users', [UserController::class, 'index'])->name('users.index');
+Route::get('/dashboard/users/create', [UserController::class, 'create'])->name('users.create');
+Route::post('/dashboard/users/store', [UserController::class, 'store'])->name('users.store');
+Route::get('/dashboard/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');
+Route::put('/dashboard/users/{id}', [UserController::class, 'update'])->name('users.update');
+Route::delete('/dashboard/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
