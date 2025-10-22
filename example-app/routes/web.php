@@ -8,6 +8,7 @@ use App\Http\Controllers\BannerController;
 use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\UptExternalController;
 use App\Http\Controllers\InovasiLayananController;
+use App\Http\Controllers\OrganisasiController;
 use App\Http\Controllers\VisiController;
 
 // Route utama
@@ -82,4 +83,12 @@ Route::post('/dashboard/visi/store', [VisiController::class, 'store'])->name('vi
 Route::get('/dashboard/visi/{id}/edit', [VisiController::class, 'edit'])->name('visi.edit');
 Route::put('/dashboard/visi/{id}', [VisiController::class, 'update'])->name('visi.update');
 Route::delete('/dashboard/visi/{id}', [VisiController::class, 'destroy'])->name('visi.destroy');
+
+// organisasi
+Route::get('/dashboard/organisasi', [OrganisasiController::class, 'index'])->name('organisasi.index');
+Route::get('/dashboard/organisasi/create', [OrganisasiController::class, 'create'])->name('organisasi.create');
+Route::post('/dashboard/organisasi/store', [OrganisasiController::class, 'store'])->name('organisasi.store');
+Route::get('/dashboard/organisasi/{id}/edit', [OrganisasiController::class, 'edit'])->name('organisasi.edit');
+Route::put('/dashboard/organisasi/{id}', [OrganisasiController::class, 'update'])->name('organisasi.update');
+Route::delete('/dashboard/organisasi/{id}', [OrganisasiController::class, 'destroy'])->name('organisasi.destroy');
 
