@@ -26,15 +26,11 @@ Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login')->m
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// =============================
-// ROUTE DASHBOARD (hanya untuk user login)
-// =============================
-Route::middleware(['auth'])->group(function () {
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
+})->name('dashboard')->middleware('auth');
 
-    Route::get('/dashboard', function () {
-        return view('dashboard.index');
-    })->name('dashboard');
-
+Route::middleware(['auth','role:Admin'])->group(function () {
     // =============================
     // INOVASI LAYANAN
     // =============================

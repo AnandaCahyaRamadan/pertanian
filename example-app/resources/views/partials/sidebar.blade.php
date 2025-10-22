@@ -92,6 +92,7 @@
           </ul>
         </li>
 
+        @if (Auth::user()->role->name === "Admin")
         <!-- Master Data -->
         <li class="nav-header">MASTER DATA</li>
         <li class="nav-item"><a href="{{ route('users.index') }}" class="nav-link {{ Request::is('dashboard/users*') ? 'active' : '' }}"><i class="nav-icon fas fa-user"></i><p>User</p></a></li>
@@ -105,6 +106,7 @@
         <li class="nav-item"><a href="{{ route('banner.index') }}" class="nav-link {{ Request::is('dashboard/banner*') ? 'active' : '' }}"><i class="nav-icon fas fa-images"></i><p>Banner</p></a></li>
         <li class="nav-item"><a href="{{ route('upt_external.index') }}" class="nav-link {{ Request::is('dashboard/upt-external*') ? 'active' : '' }}"><i class="nav-icon fas fa-link"></i><p>UPT External</p></a></li>
         <li class="nav-item mb-4"><a href="{{ route('inovasi_layanan.index') }}" class="nav-link {{ Request::is('dashboard/inovasi-layanan*') ? 'active' : '' }}"><i class="nav-icon fas fa-lightbulb"></i><p>Inovasi Layanan</p></a></li>
+        @endif
       </ul>
     </nav>
     <!-- /.sidebar-menu -->

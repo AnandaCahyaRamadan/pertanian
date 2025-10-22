@@ -25,6 +25,6 @@ class User extends Authenticatable
     // Relasi ke Role
     public function role()
     {
-        return $this->belongsTo(Role::class);
+        return $this->belongsTo(Role::class, 'role_id');
     }
 }
