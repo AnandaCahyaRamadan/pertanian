@@ -20,44 +20,30 @@
           </a>
         </li>
 
-        <!-- Data Pelatihan -->
-        <li class="nav-header">DATA PELATIHAN</li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-graduation-cap"></i>
-            <p>
-              Penyelenggara
-              <i class="fas fa-angle-left right"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item"><a href="penyelenggara_pelatihan.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Data Penyelenggara</p></a></li>
-            <li class="nav-item"><a href="jenis_sertifikasi.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Jenis Sertifikasi</p></a></li>
-            <li class="nav-item"><a href="skema_sertifikasi.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Skema Sertifikasi</p></a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a href="agenda_kegiatan.html" class="nav-link">
-            <i class="nav-icon fas fa-calendar-alt"></i>
-            <p>Agenda Kegiatan</p>
-          </a>
-        </li>
-
         <!-- Sarana & Prasarana -->
-        <li class="nav-header">SARANA & PRASARANA</li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-warehouse"></i>
-            <p>
-              Sarana Prasarana
-              <i class="fas fa-angle-left right"></i>
-            </p>
+       <li class="nav-item {{ Request::is('dashboard/sarana-prasarana*') ? 'menu-open' : '' }}">
+          <a href="#" class="nav-link {{ Request::is('dashboard/sarana-prasarana*') ? '' : '' }}">
+              <i class="nav-icon fas fa-warehouse"></i>
+              <p>
+                  Sarana Prasarana
+                  <i class="fas fa-angle-left right"></i>
+              </p>
           </a>
           <ul class="nav nav-treeview">
-            <li class="nav-item"><a href="sarana_prasarana.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Data Sarana</p></a></li>
-            <li class="nav-item"><a href="sarana_prasarana_img_scroll.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Gambar Scroll</p></a></li>
+              <li class="nav-item">
+                  <a href="{{ route('sarana_prasarana.index') }}" class="nav-link {{ Request::is('dashboard/sarana-prasarana*') ? 'active' : '' }}">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Sarana Prasarana</p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a href="sarana_prasarana_img_scroll.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Gambar Scroll</p>
+                  </a>
+              </li>
           </ul>
-        </li>
+      </li>
 
         <!-- Program dan Anggaran -->
         <li class="nav-header">PROGRAM & ANGGARAN</li>
@@ -70,7 +56,7 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
-            <li class="nav-item"><a href="master_jenis_program_anggaran.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Master Jenis Program</p></a></li>
+            <li class="nav-item"><a href="master_jenis_program_anggaran.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Jenis</p></a></li>
             <li class="nav-item"><a href="program_anggaran.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Data Program Anggaran</p></a></li>
           </ul>
         </li>
@@ -86,10 +72,40 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
-            <li class="nav-item"><a href="master_dokumen_ppid.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Master Dokumen</p></a></li>
-            <li class="nav-item"><a href="dokumen_ppid.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Data Dokumen</p></a></li>
+            <li class="nav-item"><a href="master_dokumen_ppid.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Jenis</p></a></li>
+            <li class="nav-item"><a href="dokumen_ppid.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Data Dokumen PPID</p></a></li>
             <li class="nav-item"><a href="infografis_ppid.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Infografis PPID</p></a></li>
           </ul>
+        </li>
+
+         <!-- Data Pelatihan -->
+        <li class="nav-header">DATA PELATIHAN</li>
+          <li class="nav-item">
+            <a href="penyelenggara_pelatihan.html" class="nav-link">
+                <i class="fas fa-chalkboard-teacher nav-icon"></i> <!-- ikon guru/pelatihan -->
+                <p>Pelatihan</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="jenis_sertifikasi.html" class="nav-link">
+                <i class="fas fa-id-badge nav-icon"></i> <!-- ikon sertifikat -->
+                <p>Jenis Sertifikasi</p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="skema_sertifikasi.html" class="nav-link">
+                <i class="fas fa-project-diagram nav-icon"></i> <!-- ikon skema/proyek -->
+                <p>Skema Sertifikasi</p>
+            </a>
+        </li>
+
+        </li>
+        <li class="nav-item">
+          <a href="agenda_kegiatan.html" class="nav-link">
+            <i class="nav-icon fas fa-calendar-alt"></i>
+            <p>Agenda Kegiatan</p>
+          </a>
         </li>
 
         @if (Auth::user()->role->name === "Admin")

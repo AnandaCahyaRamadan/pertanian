@@ -13,7 +13,8 @@ use App\Http\Controllers\{
     OrganisasiController,
     SocialMediaController,
     UptExternalController,
-    InovasiLayananController
+    InovasiLayananController,
+    SaranaPrasaranaController
 };
 
 // Route utama (bebas diakses)
@@ -140,4 +141,17 @@ Route::middleware(['auth','role:Admin'])->group(function () {
     Route::get('/dashboard/pegawai/{id}/edit', [PegawaiController::class, 'edit'])->name('pegawai.edit');
     Route::put('/dashboard/pegawai/{id}', [PegawaiController::class, 'update'])->name('pegawai.update');
     Route::delete('/dashboard/pegawai/{id}', [PegawaiController::class, 'destroy'])->name('pegawai.destroy');
+});
+
+
+Route::middleware(['auth'])->group(function () {
+    // =============================
+    // SARANA PRASARANA
+    // =============================
+    Route::get('/dashboard/sarana-prasarana', [SaranaPrasaranaController::class, 'index'])->name('sarana_prasarana.index');
+    Route::get('/dashboard/sarana-prasarana/create', [SaranaPrasaranaController::class, 'create'])->name('sarana_prasarana.create');
+    Route::post('/dashboard/sarana-prasarana/store', [SaranaPrasaranaController::class, 'store'])->name('sarana_prasarana.store');
+    Route::get('/dashboard/sarana-prasarana/edit/{id}', [SaranaPrasaranaController::class, 'edit'])->name('sarana_prasarana.edit');
+    Route::put('/dashboard/sarana-prasarana/update/{id}', [SaranaPrasaranaController::class, 'update'])->name('sarana_prasarana.update');
+    Route::delete('/dashboard/sarana-prasarana/delete/{id}', [SaranaPrasaranaController::class, 'destroy'])->name('sarana_prasarana.destroy');
 });
