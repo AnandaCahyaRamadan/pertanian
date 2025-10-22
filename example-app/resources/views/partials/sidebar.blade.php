@@ -97,7 +97,7 @@
         <li class="nav-item"><a href="user.html" class="nav-link"><i class="nav-icon fas fa-user"></i><p>User</p></a></li>
         <li class="nav-item"><a href="roles.html" class="nav-link"><i class="nav-icon fas fa-user-shield"></i><p>Roles</p></a></li>
         <li class="nav-item"><a href="organisasi.html" class="nav-link"><i class="nav-icon fas fa-building"></i><p>Organisasi</p></a></li>
-        <li class="nav-item"><a href="tugas.html" class="nav-link"><i class="nav-icon fas fa-tasks"></i><p>Tugas</p></a></li>
+        <li class="nav-item"><a href="{{ route('task.index') }}" class="nav-link {{ Request::is('dashboard/task*') ? 'active' : '' }}"><i class="nav-icon fas fa-tasks"></i><p>Tugas</p></a></li>
         <li class="nav-item"><a href="visi.html" class="nav-link"><i class="nav-icon fas fa-eye"></i><p>Visi</p></a></li>
         <li class="nav-item"><a href="{{ route('about.index') }}" class="nav-link {{ Request::is('dashboard/about*') ? 'active' : '' }}"><i class="nav-icon fas fa-info-circle"></i><p>Tentang</p></a></li>
         <li class="nav-item"><a href="pegawai.html" class="nav-link"><i class="nav-icon fas fa-users"></i><p>Pegawai</p></a></li>

@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AboutController;
+use App\Http\Controllers\TaskController;
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\UptExternalController;
@@ -64,4 +65,12 @@ Route::post('/dashboard/about/store', [AboutController::class, 'store'])->name('
 Route::get('/dashboard/about/{id}/edit', [AboutController::class, 'edit'])->name('about.edit');
 Route::put('/dashboard/about/{id}', [AboutController::class, 'update'])->name('about.update');
 Route::delete('/dashboard/about/{id}', [AboutController::class, 'destroy'])->name('about.destroy');
+
+// task
+Route::get('/dashboard/task', [TaskController::class, 'index'])->name('task.index');
+Route::get('/dashboard/task/create', [TaskController::class, 'create'])->name('task.create');
+Route::post('/dashboard/task/store', [TaskController::class, 'store'])->name('task.store');
+Route::get('/dashboard/task/{id}/edit', [TaskController::class, 'edit'])->name('task.edit');
+Route::put('/dashboard/task/{id}', [TaskController::class, 'update'])->name('task.update');
+Route::delete('/dashboard/task/{id}', [TaskController::class, 'destroy'])->name('task.destroy');
 
