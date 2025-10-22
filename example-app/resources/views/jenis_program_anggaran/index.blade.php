@@ -3,18 +3,14 @@
 @section('content')
 <div class="content-header">
   <div class="container-fluid">
-    <div class="row mb-2">
-      <div class="col-sm-6">
-        <h1 class="m-0">Daftar Slider Sarana Prasarana</h1>
-      </div>
-    </div>
+    <h1 class="m-0">Daftar Jenis Program Anggaran</h1>
   </div>
 </div>
 
 <section class="content">
   <div class="container-fluid">
 
-    @if (session('success'))
+     @if (session('success'))
       <div class="alert alert-success alert-dismissible fade show" role="alert">
         {{ session('success') }}
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -25,7 +21,7 @@
 
     <div class="card">
       <div class="card-header d-flex justify-content-end">
-        <a href="{{ route('sarana_prasarana_slider.create') }}" class="btn btn-primary btn-sm">
+        <a href="{{ route('jenis_program_anggaran.create') }}" class="btn btn-primary btn-sm">
           <i class="fas fa-plus"></i> Tambah Data
         </a>
       </div>
@@ -34,32 +30,24 @@
         <table class="table table-bordered table-striped text-center" id="data-table">
           <thead>
             <tr>
-              <th style="width: 50px;">No</th>
-              <th>Foto</th>
-              <th style="width: 150px;">Aksi</th>
+              <th>No</th>
+              <th>Jenis</th>
+              <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
-            @foreach ($sliders as $key => $item)
-              <tr class="align-middle">
+            @foreach($data as $key => $item)
+              <tr>
                 <td>{{ $key + 1 }}</td>
+                <td class="text-left">{{ $item->jenis }}</td>
                 <td>
-                  @if ($item->image)
-                    <img src="{{ asset('storage/'.$item->image) }}" alt="Foto" width="300" class="rounded">
-                  @else
-                    <span class="text-muted">Tidak ada</span>
-                  @endif
-                </td>
-                <td>
-                  <a href="{{ route('sarana_prasarana_slider.edit', $item->id) }}" class="btn btn-warning btn-sm">
+                  <a href="{{ route('jenis_program_anggaran.edit', $item->id) }}" class="btn btn-warning btn-sm">
                     <i class="fas fa-edit"></i>
                   </a>
-                  <form action="{{ route('sarana_prasarana_slider.destroy', $item->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus data ini?')">
+                  <form action="{{ route('jenis_program_anggaran.destroy', $item->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Yakin ingin menghapus data ini?')">
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-danger btn-sm">
-                      <i class="fas fa-trash"></i>
-                    </button>
+                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
                   </form>
                 </td>
               </tr>

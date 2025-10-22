@@ -14,6 +14,7 @@ use App\Http\Controllers\{
     SocialMediaController,
     UptExternalController,
     InovasiLayananController,
+    JenisProgramAnggaranController,
     SaranaPrasaranaController,
     SaranaPrasaranaSliderController
 };
@@ -164,4 +165,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/saranaprasarana-slider/edit/{id}', [SaranaPrasaranaSliderController::class, 'edit'])->name('sarana_prasarana_slider.edit');
     Route::put('/dashboard/saranaprasarana-slider/update/{id}', [SaranaPrasaranaSliderController::class, 'update'])->name('sarana_prasarana_slider.update');
     Route::delete('/dashboard/saranaprasarana-slider/delete/{id}', [SaranaPrasaranaSliderController::class, 'destroy'])->name('sarana_prasarana_slider.destroy');
+    // =============================
+    // JENIS PROGRAM ANGGARAN
+    // =============================
+    Route::get('/dashboard/jenis-program-anggaran', [JenisProgramAnggaranController::class, 'index'])->name('jenis_program_anggaran.index');
+    Route::get('/dashboard/jenis-program-anggaran/create', [JenisProgramAnggaranController::class, 'create'])->name('jenis_program_anggaran.create');
+    Route::post('/dashboard/jenis-program-anggaran/store', [JenisProgramAnggaranController::class, 'store'])->name('jenis_program_anggaran.store');
+    Route::get('/dashboard/jenis-program-anggaran/edit/{id}', [JenisProgramAnggaranController::class, 'edit'])->name('jenis_program_anggaran.edit');
+    Route::put('/dashboard/jenis-program-anggaran/update/{id}', [JenisProgramAnggaranController::class, 'update'])->name('jenis_program_anggaran.update');
+    Route::delete('/dashboard/jenis-program-anggaran/delete/{id}', [JenisProgramAnggaranController::class, 'destroy'])->name('jenis_program_anggaran.destroy');
 });

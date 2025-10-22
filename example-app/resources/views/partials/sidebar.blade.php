@@ -20,7 +20,7 @@
         </li>
 
         <!-- Sarana & Prasarana -->
-       <li class="nav-item {{ Request::is('dashboard/sarana-prasarana*') ||  Request::is('dashboard/saranaprasarana-slider*') ? 'menu-open' : '' }}">
+        <li class="nav-item {{ Request::is('dashboard/sarana-prasarana*') ||  Request::is('dashboard/saranaprasarana-slider*') ? 'menu-open' : '' }}">
           <a href="#" class="nav-link {{ Request::is('dashboard/sarana-prasarana*') ||  Request::is('dashboard/saranaprasarana-slider*') ? 'active' : '' }}">
               <i class="nav-icon fas fa-warehouse"></i>
               <p>
@@ -42,21 +42,31 @@
                   </a>
               </li>
           </ul>
-      </li>
+        </li>
 
         <!-- Program dan Anggaran -->
         <li class="nav-header">PROGRAM & ANGGARAN</li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-file-invoice-dollar"></i>
-            <p>
-              Program & Anggaran
-              <i class="fas fa-angle-left right"></i>
-            </p>
+         <li class="nav-item {{ Request::is('dashboard/jenis-program-anggaran*') ||  Request::is('dashboard/saranaprasarana-slider*') ? 'menu-open' : '' }}">
+          <a href="#" class="nav-link {{ Request::is('dashboard/jenis-program-anggaran*') ||  Request::is('dashboard/saranaprasarana-slider*') ? 'active' : '' }}">
+              <i class="nav-icon fas fa-warehouse"></i>
+              <p>
+                  Program dan Anggaran
+                  <i class="fas fa-angle-left right"></i>
+              </p>
           </a>
           <ul class="nav nav-treeview">
-            <li class="nav-item"><a href="master_jenis_program_anggaran.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Jenis</p></a></li>
-            <li class="nav-item"><a href="program_anggaran.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Data Program Anggaran</p></a></li>
+              <li class="nav-item">
+                  <a href="{{ route('jenis_program_anggaran.index') }}" class="nav-link {{ Request::is('dashboard/jenis-program-anggaran*') ? 'active' : '' }}">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Jenis</p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a href="{{ route('sarana_prasarana_slider.index') }}" class="nav-link {{ Request::is('dashboard/saranaprasarana-slider*') ? 'active' : '' }}">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Data Program dan Anggaran</p>
+                  </a>
+              </li>
           </ul>
         </li>
 
