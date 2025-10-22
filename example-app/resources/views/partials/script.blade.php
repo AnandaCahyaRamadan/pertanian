@@ -12,7 +12,7 @@
 <script src="{{ asset ('plugins/moment/moment.min.js') }}"></script>
 <script src="{{ asset ('plugins/daterangepicker/daterangepicker.js') }}"></script>
 <script src="{{ asset ('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
-<script src="{{ asset ('plugins/summernote/summernote-bs4.min.js') }}"></script>
+{{-- <script src="{{ asset ('plugins/summernote/summernote-bs4.min.js') }}"></script> --}}
 <script src="{{ asset ('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
 <script src="{{ asset ('dist/js/adminlte.js') }}"></script>
 <script src="{{ asset ('dist/js/demo.js') }}"></script>
@@ -36,3 +36,19 @@
 <script src="{{ asset ('plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
 <script src="{{ asset ('plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
 <script src="{{ asset ('plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+<script>
+    $(document).ready(function() {
+      $('#desc').summernote({
+        height: 200,
+        placeholder: 'Tulis deskripsi tentang lembaga...',
+        toolbar: [
+          ['style', ['bold', 'italic', 'underline', 'clear']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['insert', ['link']],
+          ['view', ['codeview']]
+        ]
+      });
+    });
+</script>

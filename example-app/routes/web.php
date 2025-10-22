@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BannerController;
+use App\Http\Controllers\AboutController;
 
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\SocialMediaController;
 use App\Http\Controllers\UptExternalController;
 use App\Http\Controllers\InovasiLayananController;
@@ -55,3 +56,12 @@ Route::post('/dashboard/social-media/store', [SocialMediaController::class, 'sto
 Route::get('/dashboard/social-media/edit/{id}', [SocialMediaController::class, 'edit'])->name('social_media.edit');
 Route::put('/dashboard/social-media/update/{id}', [SocialMediaController::class, 'update'])->name('social_media.update');
 Route::delete('/dashboard/social-media/delete/{id}', [SocialMediaController::class, 'destroy'])->name('social_media.destroy');
+
+//about
+Route::get('/dashboard/about', [AboutController::class, 'index'])->name('about.index');
+Route::get('/dashboard/about/create', [AboutController::class, 'create'])->name('about.create');
+Route::post('/dashboard/about/store', [AboutController::class, 'store'])->name('about.store');
+Route::get('/dashboard/about/{id}/edit', [AboutController::class, 'edit'])->name('about.edit');
+Route::put('/dashboard/about/{id}', [AboutController::class, 'update'])->name('about.update');
+Route::delete('/dashboard/about/{id}', [AboutController::class, 'destroy'])->name('about.destroy');
+

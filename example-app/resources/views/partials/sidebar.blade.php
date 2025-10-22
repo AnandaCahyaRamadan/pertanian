@@ -99,7 +99,7 @@
         <li class="nav-item"><a href="organisasi.html" class="nav-link"><i class="nav-icon fas fa-building"></i><p>Organisasi</p></a></li>
         <li class="nav-item"><a href="tugas.html" class="nav-link"><i class="nav-icon fas fa-tasks"></i><p>Tugas</p></a></li>
         <li class="nav-item"><a href="visi.html" class="nav-link"><i class="nav-icon fas fa-eye"></i><p>Visi</p></a></li>
-        <li class="nav-item"><a href="tentang.html" class="nav-link"><i class="nav-icon fas fa-info-circle"></i><p>Tentang</p></a></li>
+        <li class="nav-item"><a href="{{ route('about.index') }}" class="nav-link {{ Request::is('dashboard/about*') ? 'active' : '' }}"><i class="nav-icon fas fa-info-circle"></i><p>Tentang</p></a></li>
         <li class="nav-item"><a href="pegawai.html" class="nav-link"><i class="nav-icon fas fa-users"></i><p>Pegawai</p></a></li>
         <li class="nav-item"><a href="{{ route('social_media.index') }}" class="nav-link {{ Request::is('dashboard/social-media*') ? 'active' : '' }}"><i class="nav-icon fas fa-comment"></i><p>Platform Sosial Media</p></a></li>
         <li class="nav-item"><a href="{{ route('banner.index') }}" class="nav-link {{ Request::is('dashboard/banner*') ? 'active' : '' }}"><i class="nav-icon fas fa-images"></i><p>Banner</p></a></li>
