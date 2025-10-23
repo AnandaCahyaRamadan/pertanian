@@ -47,14 +47,14 @@
         <h5>Statistik</h5>
         <div style="background:#333; padding:20px; border-radius:10px; text-align:center;">
           <p>Minggu Ini</p>
-          <h3 class="text-white">2.703</h3>
+          <h3 class="text-white">{{ number_format($mingguIni) }}</h3>
           <hr>
           <p class="mb-0">Bulan Ini</p>
-          <h5 class="text-white">2.703</h5>
+          <h5 class="text-white">{{ number_format($bulanIni) }}</h5>
           <p class="mb-0">Tahun Ini</p>
-          <h5 class="text-white">2.703</h5>
+          <h5 class="text-white">{{ number_format($tahunIni) }}</h5>
           <p class="mb-0">Total</p>
-          <h5 class="text-white">2.703</h5>
+          <h5 class="text-white">{{ number_format($total) }}</h5>
         </div>
       </div>
     </div>

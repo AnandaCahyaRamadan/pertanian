@@ -9,6 +9,7 @@ use App\Http\Controllers\{
     VisiController,
     AboutController,
     BannerController,
+    BerandaController,
     DashboardController,
     DokumenPPIDController,
     InfografisPPIDController,
@@ -29,10 +30,7 @@ use App\Http\Controllers\{
 };
 use App\Models\Keahlian;
 
-// Route utama (bebas diakses)
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [BerandaController::class, 'index'])->name('index');
 
 // Route login & logout (bebas diakses)
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login')->middleware('guest');
