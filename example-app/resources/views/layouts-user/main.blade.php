@@ -16,6 +16,8 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
  
     <style>
         body {
@@ -251,6 +253,59 @@
             align-items: center;
         }
 
+        .agenda-card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .agenda-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+
+        /* 📅 Header tanggal bergaya kalender */
+        .agenda-date {
+            background: linear-gradient(135deg, #28a745, #81c784);
+            color: white;
+            text-align: center;
+            border-radius: 12px 12px 0 0;
+            padding: 10px 0;
+        }
+        .agenda-date .day {
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .agenda-date .month {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ✨ Tombol Detail */
+        .agenda-card .btn-detail {
+            background-color: #198754;
+            color: white;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .agenda-card .btn-detail:hover {
+            background-color: #146c43;
+        }
+
+        /* 🪟 Modal Desain */
+        .modal-content {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .modal-header {
+            background: linear-gradient(135deg, #198754, #4caf50);
+            color: white;
+        }
+        .modal-body img {
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -291,6 +346,7 @@
             },
         });
     </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
 </body>
 </html>

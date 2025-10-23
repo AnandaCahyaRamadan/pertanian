@@ -72,4 +72,24 @@ class PenyelenggraPelatihanController extends Controller
 
         return view('skema_sertifikasi', compact('skemas','footer','mingguIni','bulanIni','tahunIni','total',));
     }
+
+    public function getEvents()
+    {
+        $events = JadwalAgenda::all()->map(function ($item) {
+            return [
+                'id' => $item->id,
+                'title' => $item->agenda_name,
+                'start' => $item->start_date,
+                'end' => $item->end_date,
+                'backgroundColor' => '#ff9800',
+                'textColor' => '#fff',
+                'extendedProps' => [
+                    'desc' => $item->desc,
+                    'image' => $item->image,
+                ],
+            ];
+        });
+
+        return response()->json($events);
+    }
 }

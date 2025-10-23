@@ -34,6 +34,7 @@ use App\Models\Keahlian;
 Route::get('/', [BerandaController::class, 'index'])->name('index');
 Route::get('/pelatihan', [PenyelenggraPelatihanController::class, 'pelatihan']);
 Route::get('/skema-sertifikasi', [PenyelenggraPelatihanController::class, 'skemaSertifikasi']);
+Route::get('/agenda/events', [PenyelenggraPelatihanController::class, 'getEvents'])->name('agenda.events');
 
 // Route login & logout (bebas diakses)
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login')->middleware('guest');
