@@ -19,10 +19,12 @@ use App\Http\Controllers\{
     JadwalAgendaController,
     JenisPPIDController,
     JenisProgramAnggaranController,
+    KeahlianController,
     ProgramAnggaranController,
     SaranaPrasaranaController,
     SaranaPrasaranaSliderController
 };
+use App\Models\Keahlian;
 
 // Route utama (bebas diakses)
 Route::get('/', function () {
@@ -224,4 +226,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/agenda-kegiatan/edit/{id}', [JadwalAgendaController::class, 'edit'])->name('agenda_kegiatan.edit');
     Route::put('/dashboard/agenda-kegiatan/update/{id}', [JadwalAgendaController::class, 'update'])->name('agenda_kegiatan.update');
     Route::delete('/dashboard/agenda-kegiatan/delete/{id}', [JadwalAgendaController::class, 'destroy'])->name('agenda_kegiatan.destroy');
+    // =============================
+    // KEAHLIAN
+    // =============================
+    Route::get('/dashboard/keahlian', [KeahlianController::class, 'index'])->name('keahlian.index');
+    Route::get('/dashboard/keahlian/create', [KeahlianController::class, 'create'])->name('keahlian.create');
+    Route::post('/dashboard/keahlian/store', [KeahlianController::class, 'store'])->name('keahlian.store');
+    Route::get('/dashboard/keahlian/edit/{id}', [KeahlianController::class, 'edit'])->name('keahlian.edit');
+    Route::put('/dashboard/keahlian/update/{id}', [KeahlianController::class, 'update'])->name('keahlian.update');
+    Route::delete('/dashboard/keahlian/delete/{id}', [KeahlianController::class, 'destroy'])->name('keahlian.destroy');
 });

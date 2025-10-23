@@ -111,7 +111,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="jenis_sertifikasi.html" class="nav-link">
+            <a href="{{ route('keahlian.index') }}" class="nav-link {{ Request::is('dashboard/keahlian*') ? 'active' : '' }}">
                 <i class="fas fa-id-badge nav-icon"></i> <!-- ikon sertifikat -->
                 <p>Keahlian</p>
             </a>
