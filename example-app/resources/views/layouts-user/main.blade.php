@@ -240,6 +240,16 @@
             position: relative;
             z-index: 2;
         }
+          .social-box {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            height: 350px !important; /* Tinggi seragam */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
     </style>
 </head>

@@ -43,8 +43,15 @@
             <div class="col-lg-6">
                 <h4 class=" mb-3">Selayang Pandang</h4>
                 <p>
-                BBPP Ketindan adalah sebuah lembaga Pelatihan Pertanian yang terletak di Lawang,
-                Kabupaten Malang, Provinsi Jawa Timur, Indonesia.
+                    BBPP Binuang adalah singkatan dari Balai Besar Pelatihan Pertanian Binuang — salah satu unit pelaksana teknis di bawah Kementerian Pertanian Republik Indonesia yang berfokus pada pelatihan dan pengembangan sumber daya manusia pertanian.
+                </p>
+                <p>Profil Singkat BBPP Binuang</p>
+                <p>
+                    Nama lengkap : Balai Besar Pelatihan Pertanian (BBPP) Binuang
+                    <br>
+                    Kementerian : Kementerian Pertanian (Kementan RI)
+                    <br>
+                    Alamat : Jl. Jenderal Sudirman Km. 6, Binuang, Kabupaten Tapin, Kalimantan Selatan
                 </p>
 
                 <!-- Tabs -->
@@ -147,41 +154,61 @@
             <div class="section-title text-center mb-4">
                 <h2>Platform Sosial Media</h2>
             </div>
-            <div class="row justify-content-center mt-2 mb-4">
-                <!-- Instagram -->
-                <div class="col-md-4 mb-4">
-                    <blockquote 
+            <div class="row justify-content-center align-items-stretch mt-4">
+
+            <!-- Instagram -->
+            <div class="col-md-3 mb-4 d-flex">
+                <div class="social-box w-100">
+                <blockquote 
                     class="instagram-media" 
-                    data-instgrm-permalink="https://www.instagram.com/bbppketindan_malang/" 
-                    data-instgrm-version="14" style="width: 100%">
-                    </blockquote>
-                    <script async src="//www.instagram.com/embed.js"></script>
+                    data-instgrm-permalink="https://www.instagram.com/bbppbinuang/"
+                    data-instgrm-version="14">
+                </blockquote>
+                <script async src="//www.instagram.com/embed.js"></script>
                 </div>
+            </div>
 
-                <!-- X (Twitter) -->
-                <div class="col-md-4 mb-4 ">
-                    <blockquote class="twitter-tweet pt-0">
-                        <a href="https://twitter.com/bbppketindan/status/1978991123067474025?t=N6Z1wtxCG2gbG0ZhfgGh9Q&s=19"></a>
-                    </blockquote>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-
-                <!-- Facebook -->
-                <div class="col-md-4 mb-4">
-                    <div class="fb-page"
-                    data-href="https://www.facebook.com/bbppketindan"
+            <!-- Facebook -->
+            <div class="col-md-3 mb-4 d-flex">
+                <div class="social-box w-100">
+                <div class="fb-page"
+                    data-href="https://www.facebook.com/humasbbppbinuang/?locale=id_ID"
                     data-tabs="timeline"
-                    data-width="400"
-                    data-height="400"
+                    data-width="350"
+                    data-height="500"
                     data-small-header="false"
                     data-adapt-container-width="true"
                     data-hide-cover="false"
                     data-show-facepile="true">
-                    </div>
+                </div>
                 </div>
             </div>
+
+            <!-- TikTok -->
+            <div class="col-md-3 mb-4 d-flex">
+                <div class="social-box w-100">
+                <blockquote class="tiktok-embed"
+                    cite="https://www.tiktok.com/@bbpp.binuang"
+                    data-unique-id="bbpp.binuang"
+                    data-embed-type="creator"
+                    style="max-width: 350px; height: 500px;">
+                    <section> </section>
+                </blockquote>
+                <script async src="https://www.tiktok.com/embed.js"></script>
+                </div>
+            </div>
+
+            <!-- YouTube -->
+            <div class="col-md-3 mb-4 d-flex">
+                <div class="social-box w-100">
+                <iframe width="350" height="500" src="https://www.youtube.com/embed/XnfDLLFL80E?si=t2nETTZkxzvnIazI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            </div>
         </div>
-    </section>
+        </section>
+
     <div id="fb-root"></div>
     <section class="alumni-section text-center text-white py-5">
         <div class="overlay"></div>

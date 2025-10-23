@@ -34,9 +34,6 @@
             <li class="nav-item"><a class="nav-link" href="#">Peta</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Tentang Kami</a></li>
         </ul>
-
-        <a href="/login" class="btn btn-success rounded-pill px-4 py-2">Login
-        </a>
         </div>
     </div>
-    </nav>
+</nav>
