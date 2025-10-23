@@ -105,7 +105,7 @@
          <!-- Data Pelatihan -->
         <li class="nav-header">DATA PELATIHAN</li>
           <li class="nav-item">
-            <a href="penyelenggara_pelatihan.html" class="nav-link">
+            <a href="{{ route('pelatihan.index') }}" class="nav-link {{ Request::is('dashboard/pelatihan*') ? 'active' : '' }}">
                 <i class="fas fa-chalkboard-teacher nav-icon"></i> <!-- ikon guru/pelatihan -->
                 <p>Pelatihan</p>
             </a>

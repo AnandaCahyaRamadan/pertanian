@@ -20,6 +20,7 @@ use App\Http\Controllers\{
     JenisPPIDController,
     JenisProgramAnggaranController,
     KeahlianController,
+    PelatihanController,
     ProgramAnggaranController,
     SaranaPrasaranaController,
     SaranaPrasaranaSliderController
@@ -235,4 +236,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/keahlian/edit/{id}', [KeahlianController::class, 'edit'])->name('keahlian.edit');
     Route::put('/dashboard/keahlian/update/{id}', [KeahlianController::class, 'update'])->name('keahlian.update');
     Route::delete('/dashboard/keahlian/delete/{id}', [KeahlianController::class, 'destroy'])->name('keahlian.destroy');
+
+    // =============================
+    // PELATIHAN
+    // =============================
+    Route::get('/dashboard/pelatihan', [PelatihanController::class, 'index'])->name('pelatihan.index');
+    Route::get('/dashboard/pelatihan/create', [PelatihanController::class, 'create'])->name('pelatihan.create');
+    Route::post('/dashboard/pelatihan/store', [PelatihanController::class, 'store'])->name('pelatihan.store');
+    Route::get('/dashboard/pelatihan/edit/{id}', [PelatihanController::class, 'edit'])->name('pelatihan.edit');
+    Route::put('/dashboard/pelatihan/update/{id}', [PelatihanController::class, 'update'])->name('pelatihan.update');
+    Route::delete('/dashboard/pelatihan/delete/{id}', [PelatihanController::class, 'destroy'])->name('pelatihan.destroy');
 });
