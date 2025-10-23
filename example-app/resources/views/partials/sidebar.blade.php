@@ -72,8 +72,8 @@
 
         <!-- PPID -->
         <li class="nav-header">PPID</li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">
+        <li class="nav-item {{ Request::is('dashboard/jenis-ppid*') || Request::is('dashboard/dokumen-ppid*') || Request::is('dashboard/infografis-ppid*') ? 'menu-open' : '' }}">
+          <a href="#" class="nav-link {{ Request::is('dashboard/jenis-ppid*') || Request::is('dashboard/dokumen-ppid*') || Request::is('dashboard/infografis-ppid*') ? 'active' : '' }}">
             <i class="nav-icon fas fa-folder-open"></i>
             <p>
               Data PPID
@@ -81,9 +81,24 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
-            <li class="nav-item"><a href="{{ route('jenis_ppid.index') }}" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Jenis</p></a></li>
-            <li class="nav-item"><a href="{{ route('dokumen_ppid.index') }}" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Data Dokumen PPID</p></a></li>
-            <li class="nav-item"><a href="infografis_ppid.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Infografis PPID</p></a></li>
+            <li class="nav-item">
+              <a href="{{ route('jenis_ppid.index') }}" class="nav-link {{ Request::is('dashboard/jenis-ppid*') ? 'active' : '' }}">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Jenis</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ route('dokumen_ppid.index') }}" class="nav-link {{ Request::is('dashboard/dokumen-ppid*') ? 'active' : '' }}">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Data Dokumen PPID</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ route('infografis_ppid.index') }}" class="nav-link {{ Request::is('dashboard/infografis-ppid*') ? 'active' : '' }}">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Infografis PPID</p>
+              </a>
+            </li>
           </ul>
         </li>
 
@@ -98,7 +113,7 @@
         <li class="nav-item">
             <a href="jenis_sertifikasi.html" class="nav-link">
                 <i class="fas fa-id-badge nav-icon"></i> <!-- ikon sertifikat -->
-                <p>Jenis Sertifikasi</p>
+                <p>Keahlian</p>
             </a>
         </li>
 

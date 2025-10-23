@@ -10,6 +10,7 @@ use App\Http\Controllers\{
     AboutController,
     BannerController,
     DokumenPPIDController,
+    InfografisPPIDController,
     PegawaiController,
     OrganisasiController,
     SocialMediaController,
@@ -204,4 +205,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/dokumen-ppid/edit/{id}', [DokumenPPIDController::class, 'edit'])->name('dokumen_ppid.edit');
     Route::put('/dashboard/dokumen-ppid/update/{id}', [DokumenPPIDController::class, 'update'])->name('dokumen_ppid.update');
     Route::delete('/dashboard/dokumen-ppid/delete/{id}', [DokumenPPIDController::class, 'destroy'])->name('dokumen_ppid.destroy');
+    // =============================
+    // INFOGRAFIS PPID
+    // =============================
+    Route::get('/dashboard/infografis-ppid', [InfografisPPIDController::class, 'index'])->name('infografis_ppid.index');
+    Route::get('/dashboard/infografis-ppid/create', [InfografisPPIDController::class, 'create'])->name('infografis_ppid.create');
+    Route::post('/dashboard/infografis-ppid/store', [InfografisPPIDController::class, 'store'])->name('infografis_ppid.store');
+    Route::get('/dashboard/infografis-ppid/edit/{id}', [InfografisPPIDController::class, 'edit'])->name('infografis_ppid.edit');
+    Route::put('/dashboard/infografis-ppid/update/{id}', [InfografisPPIDController::class, 'update'])->name('infografis_ppid.update');
+    Route::delete('/dashboard/infografis-ppid/delete/{id}', [InfografisPPIDController::class, 'destroy'])->name('infografis_ppid.destroy');
 });
