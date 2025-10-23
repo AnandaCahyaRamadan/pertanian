@@ -152,7 +152,7 @@
     <section id="sosial" class="py-5">
         <div class="container text-center">
             <div class="section-title text-center mb-4">
-                <h2>Platform Sosial Media</h2>
+                <h2 class="mb-4">Platform Sosial Media</h2>
             </div>
             <div class="row justify-content-center align-items-stretch mt-4">
 
