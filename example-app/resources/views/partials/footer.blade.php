@@ -1,7 +1,7 @@
 <footer style="background-color:#222; color:#fff; padding:50px 0;">
   <div class="container">
     <div class="row">
-        <div class="col-md-4 mb-4">
+        <div class="col-md-4 mb-4 pr-0">
         <h5>Tentang Kami</h5>
         <div class="d-flex justify-content-start align-items-center mt-2 mb-4 flex-wrap" style="gap: 10px;">
           <img src="{{ asset('image/kementan.png') }}" alt="Kementan" style="height: 40px;">
@@ -21,18 +21,18 @@
     </div>
 
       <!-- Menu -->
-       <div class="col-md-3 mb-4">
-        <h5>Menu</h5>
-        <ul class="list-unstyled">
-          <li><a href="/">Beranda</a></li>
-          <li><a href="#">Pelatihan</a></li>
-          <li><a href="#">Kerja Sama</a></li>
-          <li><a href="#">PPID</a></li>
-          <li><a href="#">Program dan Anggaran</a></li>
-          <li><a href="#">Peta</a></li>
-          <li><a href="#">Tentang Kami</a></li>
-        </ul>
-      </div>
+     <div class="col-md-3 mb-4 pr-0">
+      <h5>Menu</h5>
+      <ul class="list-unstyled">
+        <li><a href="/"><i class="fas fa-angle-right me-2"></i> Beranda</a></li>
+        <li><a href="#"><i class="fas fa-angle-right me-2"></i> Pelatihan</a></li>
+        <li><a href="#"><i class="fas fa-angle-right me-2"></i> Kerja Sama</a></li>
+        <li><a href="#"><i class="fas fa-angle-right me-2"></i> PPID</a></li>
+        <li><a href="#"><i class="fas fa-angle-right me-2"></i> Program dan Anggaran</a></li>
+        <li><a href="#"><i class="fas fa-angle-right me-2"></i> Peta</a></li>
+        <li><a href="#"><i class="fas fa-angle-right me-2"></i> Tentang Kami</a></li>
+      </ul>
+    </div>
 
       <!-- Lokasi -->
       <div class="col-md-3 mb-4">
@@ -41,7 +41,7 @@
       </div>
 
       <!-- Statistik -->
-      <div class="col-md-2 mb-4">
+      <div class="col-md-2 mb-4 pr-0">
         <h5>Statistik</h5>
         <div style="background:#333; padding:20px; border-radius:10px; text-align:center;">
           <p>Minggu Ini</p>
