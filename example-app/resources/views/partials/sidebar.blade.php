@@ -81,7 +81,7 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
-            <li class="nav-item"><a href="master_dokumen_ppid.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Jenis</p></a></li>
+            <li class="nav-item"><a href="{{ route('jenis_ppid.index') }}" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Jenis</p></a></li>
             <li class="nav-item"><a href="dokumen_ppid.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Data Dokumen PPID</p></a></li>
             <li class="nav-item"><a href="infografis_ppid.html" class="nav-link"><i class="far fa-circle nav-icon"></i><p>Infografis PPID</p></a></li>
           </ul>

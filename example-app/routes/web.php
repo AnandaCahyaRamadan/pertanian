@@ -14,6 +14,7 @@ use App\Http\Controllers\{
     SocialMediaController,
     UptExternalController,
     InovasiLayananController,
+    JenisPPIDController,
     JenisProgramAnggaranController,
     ProgramAnggaranController,
     SaranaPrasaranaController,
@@ -184,4 +185,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/program-anggaran/edit/{id}', [ProgramAnggaranController::class, 'edit'])->name('program_anggaran.edit');
     Route::put('/dashboard/program-anggaran/update/{id}', [ProgramAnggaranController::class, 'update'])->name('program_anggaran.update');
     Route::delete('/dashboard/program-anggaran/delete/{id}', [ProgramAnggaranController::class, 'destroy'])->name('program_anggaran.destroy');
+    // =============================
+    // JENIS PPID
+    // =============================
+    Route::get('/dashboard/jenis-ppid', [JenisPPIDController::class, 'index'])->name('jenis_ppid.index');
+    Route::get('/dashboard/jenis-ppid/create', [JenisPPIDController::class, 'create'])->name('jenis_ppid.create');
+    Route::post('/dashboard/jenis-ppid/store', [JenisPPIDController::class, 'store'])->name('jenis_ppid.store');
+    Route::get('/dashboard/jenis-ppid/edit/{id}', [JenisPPIDController::class, 'edit'])->name('jenis_ppid.edit');
+    Route::put('/dashboard/jenis-ppid/update/{id}', [JenisPPIDController::class, 'update'])->name('jenis_ppid.update');
+    Route::delete('/dashboard/jenis-ppid/delete/{id}', [JenisPPIDController::class, 'destroy'])->name('jenis_ppid.destroy');
 });
