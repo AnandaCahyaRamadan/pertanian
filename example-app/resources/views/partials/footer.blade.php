@@ -1,7 +1,7 @@
 <footer style="background-color:#222; color:#fff; padding:50px 0;">
   <div class="container">
     <div class="row">
-        <div class="col-4 mb-4">
+        <div class="col-md-4 mb-4">
         <h5>Tentang Kami</h5>
         <div class="d-flex justify-content-start align-items-center mt-2 mb-4 flex-wrap" style="gap: 10px;">
           <img src="{{ asset('image/kementan.png') }}" alt="Kementan" style="height: 40px;">
@@ -21,7 +21,7 @@
     </div>
 
       <!-- Menu -->
-       <div class="col-3 mb-4">
+       <div class="col-md-3 mb-4">
         <h5>Menu</h5>
         <ul class="list-unstyled">
           <li><a href="/">Beranda</a></li>
@@ -35,13 +35,13 @@
       </div>
 
       <!-- Lokasi -->
-      <div class="col-3 mb-4">
+      <div class="col-md-3 mb-4">
         <h5>Lokasi</h5>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.7720490522925!2d115.08673019999998!3d-3.1547122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de5c8a25aae02d3%3A0xa98e801841821528!2sBBPP%20Binuang!5e0!3m2!1sid!2sid!4v1761189053507!5m2!1sid!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <!-- Statistik -->
-      <div class="col-2 mb-4">
+      <div class="col-md-2 mb-4">
         <h5>Statistik</h5>
         <div style="background:#333; padding:20px; border-radius:10px; text-align:center;">
           <p>Minggu Ini</p>

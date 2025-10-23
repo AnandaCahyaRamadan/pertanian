@@ -4,21 +4,21 @@
     <section id="beranda" class="hero">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
             <div class="carousel-inner">
-            @foreach($banner as $index => $item)
-            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                <img src="{{ asset('storage/' . $item->image) }}" 
-                    class="d-block w-100" 
-                    alt="" 
-                    style="height: 500px; object-fit: cover;">
-            </div>
-            @endforeach
+                @foreach($banner as $index => $item)
+                    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                        <img src="{{ asset('storage/' . $item->image) }}" 
+                            class="d-block w-100" 
+                            alt="" 
+                            style="height: 500px; object-fit: cover;">
+                    </div>
+                @endforeach
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
+                <span class="carousel-control-prev-icon"></span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
+                <span class="carousel-control-next-icon"></span>
             </button>
         </div>
     </section>
@@ -153,8 +153,7 @@
                     <blockquote 
                     class="instagram-media" 
                     data-instgrm-permalink="https://www.instagram.com/bbppketindan_malang/" 
-                    data-instgrm-version="14"
-                    style="max-width: 100%; background:#fff; border-radius:10px; margin:auto;">
+                    data-instgrm-version="14" style="width: 100%">
                     </blockquote>
                     <script async src="//www.instagram.com/embed.js"></script>
                 </div>
@@ -172,7 +171,7 @@
                     <div class="fb-page"
                     data-href="https://www.facebook.com/bbppketindan"
                     data-tabs="timeline"
-                    data-width="350"
+                    data-width="400"
                     data-height="400"
                     data-small-header="false"
                     data-adapt-container-width="true"
