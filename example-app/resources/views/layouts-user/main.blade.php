@@ -38,7 +38,7 @@
 
         .navbar-brand {
             font-weight: 700;
-            color: #198754 !important;
+            color: #3e7712 !important;
             font-size: 1.3rem;
         }
 
@@ -51,7 +51,7 @@
 
         .nav-link:hover,
         .nav-link.active {
-            color: #198754 !important;
+            color: #3e7712 !important;
         }
 
         .hero .carousel-item img {
@@ -124,13 +124,13 @@
 
         #kontak form input:focus,
         #kontak form textarea:focus {
-            border-color: #198754;
+            border-color: #3e7712;
             box-shadow: 0 0 5px rgba(25,135,84,0.4);
         }
 
         footer {
-            background-color: #292929;
-            color: #727272;
+            background-color: #2f451e;
+            color: white;
             padding: 60px 0 20px;
         }
 
@@ -140,13 +140,19 @@
             font-weight: 300;
         }
 
-        footer a,p, h3 {
+        /* footer a,p, h3 {
             color: #7e7e7e;
+            text-decoration: none;
+        } */
+         footer a,
+        footer p,
+        footer h3 {
+            color: white;
             text-decoration: none;
         }
 
         footer a:hover {
-            color: #198754;
+            color: #3e7712;
         }
 
         .footer-bottom {
@@ -184,7 +190,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #198754;
+            background-color: #3e7712;
             border-radius: 50%;
             color: #fff;
             font-size: 20px;
@@ -216,7 +222,7 @@
             margin-top: 30px !important;
         }
         .swiper-pagination-bullet-active {
-            background: #198754 !important;
+            background: #3e7712 !important;
         }
 
         .alumni-section {
@@ -239,15 +245,17 @@
             position: relative;
             z-index: 2;
         }
-          .social-box {
+        .social-box {
             background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
+            overflow: hidden; /* bisa diganti auto kalau ingin scroll */
             width: 100%;
-            height: 350px !important; /* Tinggi seragam */
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 10px; /* beri sedikit ruang di dalam box */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            /* jangan pakai height tetap */
         }
 
         #calendar {
@@ -260,7 +268,7 @@
         .fc-toolbar-title {
             font-weight: 700;
             font-size: 1.8rem;
-            color: #198754;
+            color: #3e7712;
         }
 
         .fc-daygrid-event {
@@ -276,7 +284,7 @@
         }
 
         .fc-button {
-            background-color: #198754;
+            background-color: #3e7712;
             border: none;
             color: #fff;
             font-weight: 500;

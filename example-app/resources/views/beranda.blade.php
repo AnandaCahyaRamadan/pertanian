@@ -157,7 +157,7 @@
             <div class="row justify-content-center align-items-stretch mt-4">
 
             <!-- Instagram -->
-            <div class="col-md-3 mb-4 d-flex">
+            <div class="col-md-4 mb-4 d-flex">
                 <div class="social-box w-100">
                 <blockquote 
                     class="instagram-media" 
@@ -168,14 +168,28 @@
                 </div>
             </div>
 
-            <!-- Facebook -->
-            <div class="col-md-3 mb-4 d-flex">
+            <!-- TikTok -->
+            <div class="col-md-4 mb-4 d-flex">
+                <div class="social-box w-100">
+                <blockquote class="tiktok-embed"
+                    cite="https://www.tiktok.com/@bbpp.binuang"
+                    data-unique-id="bbpp.binuang"
+                    data-embed-type="creator"
+                    style="width: 100%; max-width: 350px;">
+                    <section> </section>
+                </blockquote>
+                <script async src="https://www.tiktok.com/embed.js"></script>
+                </div>
+            </div>
+
+                        <!-- Facebook -->
+            <div class="col-md-4 mb-4 d-flex">
                 <div class="social-box w-100">
                 <div class="fb-page"
                     data-href="https://www.facebook.com/humasbbppbinuang/?locale=id_ID"
                     data-tabs="timeline"
-                    data-width="350"
-                    data-height="500"
+                    data-width="320"
+                    data-height="440"
                     data-small-header="false"
                     data-adapt-container-width="true"
                     data-hide-cover="false"
@@ -184,30 +198,9 @@
                 </div>
             </div>
 
-            <!-- TikTok -->
-            <div class="col-md-3 mb-4 d-flex">
-                <div class="social-box w-100">
-                <blockquote class="tiktok-embed"
-                    cite="https://www.tiktok.com/@bbpp.binuang"
-                    data-unique-id="bbpp.binuang"
-                    data-embed-type="creator"
-                    style="max-width: 350px; height: 500px;">
-                    <section> </section>
-                </blockquote>
-                <script async src="https://www.tiktok.com/embed.js"></script>
-                </div>
-            </div>
-
-            <!-- YouTube -->
-            <div class="col-md-3 mb-4 d-flex">
-                <div class="social-box w-100">
-                <iframe width="350" height="500" src="https://www.youtube.com/embed/XnfDLLFL80E?si=t2nETTZkxzvnIazI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-
             </div>
         </div>
-        </section>
+    </section>
 
     <div id="fb-root"></div>
     <section class="alumni-section text-center text-white py-5">

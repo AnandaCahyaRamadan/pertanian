@@ -11,8 +11,8 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle {{ Request::is('pelatihan') || Request::is('skema-sertifikasi')  ? 'active' : '' }}" href="#" data-bs-toggle="dropdown">Pelatihan</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/pelatihan">Pelatihan</a></li>
-                    <li><a class="dropdown-item" href="/skema-sertifikasi">Sertifikasi</a></li>
+                    <li><a class="dropdown-item" href="/pelatihan">Pelatihan Aparatun & Nonaparatur</a></li>
+                    <li><a class="dropdown-item" href="/skema-sertifikasi">Lembaga Sertifikasi Profesi</a></li>
                 </ul>
             </li>
               <li class="nav-item dropdown">
@@ -30,8 +30,8 @@
                     <li><a class="dropdown-item" href="#">Dokumen PPID</a></li>
                 </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Program dan Anggaran</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Peta</a></li>
+            {{-- <li class="nav-item"><a class="nav-link" href="#">Program dan Anggaran</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Peta</a></li> --}}
             <li class="nav-item"><a class="nav-link" href="#">Tentang Kami</a></li>
         </ul>
         </div>
