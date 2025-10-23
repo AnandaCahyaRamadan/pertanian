@@ -65,13 +65,18 @@
         var calendarEl = document.getElementById('calendar');
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
             locale: 'id',
+            initialView: 'dayGridMonth', // tampilan bulan
             headerToolbar: {
-                left: 'prev,next today',
+                left: 'prev,next',
                 center: 'title',
-                right: ''
+                right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
             },
+            themeSystem: 'standard',
+            navLinks: true,
+            editable: false,
+            selectable: true,
+            dayMaxEvents: true,
             events: '{{ route("agenda.events") }}', // Route dari controller
             eventClick: function (info) {
                 var event = info.event;

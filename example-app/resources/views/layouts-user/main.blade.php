@@ -253,58 +253,41 @@
             align-items: center;
         }
 
-        .agenda-card {
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        .agenda-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-        }
-
-        /* 📅 Header tanggal bergaya kalender */
-        .agenda-date {
-            background: linear-gradient(135deg, #28a745, #81c784);
-            color: white;
-            text-align: center;
-            border-radius: 12px 12px 0 0;
-            padding: 10px 0;
-        }
-        .agenda-date .day {
-            font-size: 36px;
-            font-weight: bold;
-            line-height: 1;
-        }
-        .agenda-date .month {
-            font-size: 16px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* ✨ Tombol Detail */
-        .agenda-card .btn-detail {
-            background-color: #198754;
-            color: white;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        .agenda-card .btn-detail:hover {
-            background-color: #146c43;
-        }
-
-        /* 🪟 Modal Desain */
-        .modal-content {
-            border-radius: 15px;
-            overflow: hidden;
-        }
-        .modal-header {
-            background: linear-gradient(135deg, #198754, #4caf50);
-            color: white;
-        }
-        .modal-body img {
+        #calendar {
+            background: #fff;
+            padding: 20px;
             border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .fc-toolbar-title {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #198754;
+        }
+
+        .fc-daygrid-event {
+            border-radius: 8px;
+            padding: 4px 6px;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .fc-daygrid-event:hover {
+            opacity: 0.85;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        }
+
+        .fc-button {
+            background-color: #198754;
+            border: none;
+            color: #fff;
+            font-weight: 500;
+            border-radius: 6px;
+        }
+
+        .fc-button:hover {
+            background-color: #145a32;
         }
     </style>
 </head>
