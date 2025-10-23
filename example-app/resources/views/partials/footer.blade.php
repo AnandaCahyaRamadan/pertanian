@@ -39,8 +39,7 @@
       <!-- Lokasi -->
       <div class="col-3 mb-4">
         <h5>Lokasi</h5>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.123456789!2d112.xxxx!3d-7.xxx!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2xxxx%3A0xabcdef!2sBalai%20Besar%20Pelatihan%20Pertanian!5e0!3m2!1sen!2sid!4v1234567890" 
-                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.7720490522925!2d115.08673019999998!3d-3.1547122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de5c8a25aae02d3%3A0xa98e801841821528!2sBBPP%20Binuang!5e0!3m2!1sid!2sid!4v1761189053507!5m2!1sid!2sid" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <!-- Statistik -->
@@ -48,10 +47,14 @@
         <h5>Statistik</h5>
         <div style="background:#333; padding:20px; border-radius:10px; text-align:center;">
           <p>Minggu Ini</p>
-          <h3>2.703</h3>
-          <p>Bulan Ini: 4.236</p>
-          <p>Tahun Ini: 45.540</p>
-          <p>Total: 97.075</p>
+          <h3 class="text-white">2.703</h3>
+          <hr>
+          <p class="mb-0">Bulan Ini</p>
+          <h5 class="text-white">2.703</h5>
+          <p class="mb-0">Tahun Ini</p>
+          <h5 class="text-white">2.703</h5>
+          <p class="mb-0">Total</p>
+          <h5 class="text-white">2.703</h5>
         </div>
       </div>
     </div>
