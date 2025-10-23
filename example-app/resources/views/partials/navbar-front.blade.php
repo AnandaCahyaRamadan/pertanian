@@ -7,7 +7,7 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav me-3">
-            <li class="nav-item"><a class="nav-link active" href="#home">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/">Beranda</a></li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Penyelenggara Pelatihan</a>
                 <ul class="dropdown-menu">

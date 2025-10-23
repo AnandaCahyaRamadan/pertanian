@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-4 mb-4">
         <h5>Tentang Kami</h5>
-        <div class="d-flex justify-content-start align-items-center mt-2 mb-2 flex-wrap" style="gap: 10px;">
+        <div class="d-flex justify-content-start align-items-center mt-2 mb-4 flex-wrap" style="gap: 10px;">
           <img src="{{ asset('image/kementan.png') }}" alt="Kementan" style="height: 40px;">
           <img src="{{ asset('image/bppsdmp.png') }}" alt="BPPSDMP" style="height: 40px;">
           <img src="{{ asset('image/melyani.png') }}" alt="Melyani" style="height: 40px;">
@@ -66,7 +66,7 @@
     </div>
 
     <div class="footer-bottom text-center mt-4">
-      <p class="mb-0">© 2025 Balai Besar Pelatihan Pertanian</p>
+      <p class="mb-0">©copyright 2025</p>
     </div>
   </div>
 </footer>
