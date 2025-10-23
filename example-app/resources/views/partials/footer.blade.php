@@ -3,6 +3,12 @@
     <div class="row">
         <div class="col-4 mb-4">
         <h5>Tentang Kami</h5>
+        <div class="d-flex justify-content-start align-items-center mt-2 mb-2 flex-wrap" style="gap: 10px;">
+          <img src="{{ asset('image/kementan.png') }}" alt="Kementan" style="height: 40px;">
+          <img src="{{ asset('image/bppsdmp.png') }}" alt="BPPSDMP" style="height: 40px;">
+          <img src="{{ asset('image/melyani.png') }}" alt="Melyani" style="height: 40px;">
+          <img src="{{ asset('image/berakhlak.png') }}" alt="Berakhlak" style="height: 40px;">
+        </div>
         <p>
             Balai Besar Pelatihan Pertanian (BBPP) Ketindan<br>
             Jln. Ketindan No.1, Lawang, Kab. Malang, Provinsi Jawa Timur (65214)<br>
