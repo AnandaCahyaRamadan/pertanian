@@ -9,6 +9,7 @@ use App\Http\Controllers\{
     VisiController,
     AboutController,
     BannerController,
+    DashboardController,
     DokumenPPIDController,
     InfografisPPIDController,
     PegawaiController,
@@ -38,9 +39,7 @@ Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login')->m
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
-})->name('dashboard')->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
 Route::middleware(['auth','role:Admin'])->group(function () {
     // =============================
