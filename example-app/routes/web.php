@@ -9,6 +9,7 @@ use App\Http\Controllers\{
     VisiController,
     AboutController,
     BannerController,
+    DokumenPPIDController,
     PegawaiController,
     OrganisasiController,
     SocialMediaController,
@@ -194,4 +195,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/jenis-ppid/edit/{id}', [JenisPPIDController::class, 'edit'])->name('jenis_ppid.edit');
     Route::put('/dashboard/jenis-ppid/update/{id}', [JenisPPIDController::class, 'update'])->name('jenis_ppid.update');
     Route::delete('/dashboard/jenis-ppid/delete/{id}', [JenisPPIDController::class, 'destroy'])->name('jenis_ppid.destroy');
+    // =============================
+    // DOKOMEN PPID
+    // =============================
+    Route::get('/dashboard/dokumen-ppid', [DokumenPPIDController::class, 'index'])->name('dokumen_ppid.index');
+    Route::get('/dashboard/dokumen-ppid/create', [DokumenPPIDController::class, 'create'])->name('dokumen_ppid.create');
+    Route::post('/dashboard/dokumen-ppid/store', [DokumenPPIDController::class, 'store'])->name('dokumen_ppid.store');
+    Route::get('/dashboard/dokumen-ppid/edit/{id}', [DokumenPPIDController::class, 'edit'])->name('dokumen_ppid.edit');
+    Route::put('/dashboard/dokumen-ppid/update/{id}', [DokumenPPIDController::class, 'update'])->name('dokumen_ppid.update');
+    Route::delete('/dashboard/dokumen-ppid/delete/{id}', [DokumenPPIDController::class, 'destroy'])->name('dokumen_ppid.destroy');
 });

@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('program_anggaran', function (Blueprint $table) {
+        Schema::create('dokumen_ppid', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
             $table->string('file'); //pdf/word/excel
-            $table->foreignId('jenis_program_anggaran_id')->references('id')->on('jenis_program_anggaran');
+            $table->foreignId('jenis_ppid_id')->references('id')->on('jenis_ppid');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('program_anggaran');
+        Schema::dropIfExists('dokumen_ppid');
     }
 };
