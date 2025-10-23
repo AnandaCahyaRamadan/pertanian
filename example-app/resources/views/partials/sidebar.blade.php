@@ -45,9 +45,9 @@
         </li>
 
         <!-- Program dan Anggaran -->
-        <li class="nav-header">PROGRAM & ANGGARAN</li>
-         <li class="nav-item {{ Request::is('dashboard/jenis-program-anggaran*') ||  Request::is('dashboard/saranaprasarana-slider*') ? 'menu-open' : '' }}">
-          <a href="#" class="nav-link {{ Request::is('dashboard/jenis-program-anggaran*') ||  Request::is('dashboard/saranaprasarana-slider*') ? 'active' : '' }}">
+        <li class="nav-header">DATA PROGRAM & ANGGARAN</li>
+        <li class="nav-item {{ Request::is('dashboard/jenis-program-anggaran*') ||  Request::is('dashboard/program-anggaran*') ? 'menu-open' : '' }}">
+          <a href="#" class="nav-link {{ Request::is('dashboard/jenis-program-anggaran*') ||  Request::is('dashboard/program-anggaran*') ? 'active' : '' }}">
               <i class="nav-icon fas fa-warehouse"></i>
               <p>
                   Program dan Anggaran
@@ -62,9 +62,9 @@
                   </a>
               </li>
               <li class="nav-item">
-                  <a href="{{ route('sarana_prasarana_slider.index') }}" class="nav-link {{ Request::is('dashboard/saranaprasarana-slider*') ? 'active' : '' }}">
+                  <a href="{{ route('program_anggaran.index') }}" class="nav-link {{ Request::is('dashboard/program-anggaran*') ? 'active' : '' }}">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Data Program dan Anggaran</p>
+                      <p>Program dan Anggaran</p>
                   </a>
               </li>
           </ul>
