@@ -8,7 +8,7 @@
             <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
                 <img src="{{ asset('storage/' . $item->image) }}" 
                     class="d-block w-100" 
-                    alt="Banner {{ $index + 1 }}" 
+                    alt="" 
                     style="height: 500px; object-fit: cover;">
             </div>
             @endforeach
