@@ -100,7 +100,7 @@
             <div class="row text-center justify-content-center mb-4">
                 @foreach($inovasi_layanan as $item)
                     <div class="col-3 g-3">
-                        <img src="{{ asset('storage/' . $item->image) }}" alt="" class="w-100">
+                        <img src="{{ asset('storage/' . $item->image) }}" alt="" class="w-100 shadow-sm rounded">
                         <p class="mt-3 text-dark">
                             <a href="{{ $item->link }}" class="text-decoration-none fw-bold text-dark">
                                 {{ $item->title }}

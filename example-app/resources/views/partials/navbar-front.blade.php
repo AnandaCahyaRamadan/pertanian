@@ -9,10 +9,10 @@
         <ul class="navbar-nav me-3">
             <li class="nav-item"><a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="/">Beranda</a></li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pelatihan</a>
+                <a class="nav-link dropdown-toggle {{ Request::is('pelatihan') || Request::is('skema-sertifikasi')  ? 'active' : '' }}" href="#" data-bs-toggle="dropdown">Pelatihan</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Pelatihan</a></li>
-                    <li><a class="dropdown-item" href="#">Sertifikasi</a></li>
+                    <li><a class="dropdown-item" href="/pelatihan">Pelatihan</a></li>
+                    <li><a class="dropdown-item" href="/skema-sertifikasi">Sertifikasi</a></li>
                 </ul>
             </li>
               <li class="nav-item dropdown">

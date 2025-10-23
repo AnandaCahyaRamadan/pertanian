@@ -23,6 +23,7 @@ use App\Http\Controllers\{
     JenisProgramAnggaranController,
     KeahlianController,
     PelatihanController,
+    PenyelenggraPelatihanController,
     ProgramAnggaranController,
     SaranaPrasaranaController,
     SaranaPrasaranaSliderController,
@@ -31,6 +32,8 @@ use App\Http\Controllers\{
 use App\Models\Keahlian;
 
 Route::get('/', [BerandaController::class, 'index'])->name('index');
+Route::get('/pelatihan', [PenyelenggraPelatihanController::class, 'pelatihan']);
+Route::get('/skema-sertifikasi', [PenyelenggraPelatihanController::class, 'skemaSertifikasi']);
 
 // Route login & logout (bebas diakses)
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login')->middleware('guest');
