@@ -16,6 +16,7 @@ use App\Http\Controllers\{
     SocialMediaController,
     UptExternalController,
     InovasiLayananController,
+    JadwalAgendaController,
     JenisPPIDController,
     JenisProgramAnggaranController,
     ProgramAnggaranController,
@@ -214,4 +215,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/infografis-ppid/edit/{id}', [InfografisPPIDController::class, 'edit'])->name('infografis_ppid.edit');
     Route::put('/dashboard/infografis-ppid/update/{id}', [InfografisPPIDController::class, 'update'])->name('infografis_ppid.update');
     Route::delete('/dashboard/infografis-ppid/delete/{id}', [InfografisPPIDController::class, 'destroy'])->name('infografis_ppid.destroy');
+    // =============================
+    // JADWAL AGENDA
+    // =============================
+    Route::get('/dashboard/agenda-kegiatan', [JadwalAgendaController::class, 'index'])->name('agenda_kegiatan.index');
+    Route::get('/dashboard/agenda-kegiatan/create', [JadwalAgendaController::class, 'create'])->name('agenda_kegiatan.create');
+    Route::post('/dashboard/agenda-kegiatan/store', [JadwalAgendaController::class, 'store'])->name('agenda_kegiatan.store');
+    Route::get('/dashboard/agenda-kegiatan/edit/{id}', [JadwalAgendaController::class, 'edit'])->name('agenda_kegiatan.edit');
+    Route::put('/dashboard/agenda-kegiatan/update/{id}', [JadwalAgendaController::class, 'update'])->name('agenda_kegiatan.update');
+    Route::delete('/dashboard/agenda-kegiatan/delete/{id}', [JadwalAgendaController::class, 'destroy'])->name('agenda_kegiatan.destroy');
 });

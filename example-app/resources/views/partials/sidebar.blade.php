@@ -126,7 +126,7 @@
 
         </li>
         <li class="nav-item">
-          <a href="agenda_kegiatan.html" class="nav-link">
+          <a href="{{ route('agenda_kegiatan.index') }}" class="nav-link {{ Request::is('dashboard/agenda-kegiatan*') ? 'active' : '' }}">
             <i class="nav-icon fas fa-calendar-alt"></i>
             <p>Agenda Kegiatan</p>
           </a>
