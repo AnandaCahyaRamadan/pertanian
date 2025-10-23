@@ -2,8 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use Carbon\Carbon;
+use App\Models\Task;
+use App\Models\Visi;
+use App\Models\Banner;
+use App\Models\InovasiLayanan;
 use App\Models\Visitor;
+use App\Models\Organisasi;
+use App\Models\UptExternal;
 use Illuminate\Http\Request;
 
 class BerandaController extends Controller
@@ -33,6 +40,14 @@ class BerandaController extends Controller
         $tahunIni  = Visitor::whereYear('visited_at', Carbon::now()->year)->count();
         $total     = Visitor::count();
 
-        return view('beranda', compact('mingguIni','bulanIni','tahunIni','total'));
+        // get banner;
+        $banner = Banner::all();
+        $organisasi = Organisasi::first();
+        $tugas = Task::first();
+        $visi = Visi::first();
+        $inovasi_layanan = InovasiLayanan::all();
+        $upt_external = UptExternal::all();
+        $footer = About::first();
+        return view('beranda', compact('mingguIni','bulanIni','tahunIni','total','banner','organisasi','tugas','visi','inovasi_layanan','upt_external','footer'));
     }
 }

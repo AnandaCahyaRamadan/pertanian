@@ -52,7 +52,7 @@
         </div>
 
         <div class="card-footer">
-          <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Perbarui</button>
+          <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Update</button>
           <a href="{{ route('inovasi_layanan.index') }}" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Kembali</a>
         </div>
       </form>

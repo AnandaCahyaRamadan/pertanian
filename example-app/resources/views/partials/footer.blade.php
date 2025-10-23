@@ -10,15 +10,7 @@
           <img src="{{ asset('image/berakhlak.png') }}" alt="Berakhlak" style="height: 40px;">
         </div>
         <p>
-            Balai Besar Pelatihan Pertanian (BBPP) Ketindan<br>
-            Jln. Ketindan No.1, Lawang, Kab. Malang, Provinsi Jawa Timur (65214)<br>
-            Telp/Fax (+62) 341 426235 / 429725<br>
-            Email: bbppketindan@pertanian.go.id<br>
-            Web: <a href="https://bbppketindan.bppsdmp.pertanian.go.id" target="_blank">https://bbppketindan.bppsdmp.pertanian.go.id</a>
-        </p>
-        <p>
-            Jam Kantor: Senin-Kamis 07.30-16.00 WIB, Jumat 07.30-16.30 WIB<br>
-            Jam Layanan: Senin-Jumat 08.00-16.00 WIB
+          {!! $footer->desc !!}
         </p>
         <div>
             <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
@@ -32,8 +24,8 @@
        <div class="col-3 mb-4">
         <h5>Menu</h5>
         <ul class="list-unstyled">
-          <li><a href="#">Beranda</a></li>
-          <li><a href="#">Penyelenggara Pelatihan</a></li>
+          <li><a href="/">Beranda</a></li>
+          <li><a href="#">Pelatihan</a></li>
           <li><a href="#">Kerja Sama</a></li>
           <li><a href="#">PPID</a></li>
           <li><a href="#">Program dan Anggaran</a></li>

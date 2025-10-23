@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pertanian Maju</title>
+    <title>Binuang</title>
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+ 
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -42,6 +51,10 @@
             color: #198754 !important;
         }
 
+        .active {
+            color: #198754 !important;
+        }
+
         .hero .carousel-item img {
             height: 600px;
             object-fit: cover;
@@ -64,21 +77,9 @@
         }
 
         .section-title h2 {
-            font-weight: 700;
-            color: #198754;
+            font-weight: 400;
             position: relative;
             display: inline-block;
-        }
-
-        .section-title h2::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: #ffc107;
         }
 
         #tentang img {
@@ -140,7 +141,7 @@
             font-weight: 300;
         }
 
-    footer a,p, h3 {
+        footer a,p, h3 {
             color: #7e7e7e;
             text-decoration: none;
         }
@@ -167,6 +168,79 @@
         .social-icon:hover {
             color:#1abc9c;
         }
+
+        /* Section title */
+        .section-title h2 {
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        #upt {
+            position: relative;
+        }
+
+        .custom-nav-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #198754;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            position: absolute;
+            top: 55%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .swiper-button-prev { left: 20px; margin-top: 12px }
+        .swiper-button-next { right: 20px; margin-top: 12px }
+
+        .custom-nav-btn:hover {
+            background-color: #145a32;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            display: none !important;
+        }
+
+        .swiper-pagination-bullet {
+            background: #c7e6d1 !important;
+            opacity: 1 !important;
+            margin-top: 30px !important;
+        }
+        .swiper-pagination-bullet-active {
+            background: #198754 !important;
+        }
+
+        .alumni-section {
+            position: relative;
+            background: url('image/alumni.jpg');
+            color: white;
+        }
+
+        .alumni-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55); /* lapisan gelap */
+            z-index: 1;
+        }
+
+        .alumni-section .container {
+            position: relative;
+            z-index: 2;
+        }
+
     </style>
 </head>
 <body>
@@ -176,6 +250,37 @@
     @yield('content')
 
     @include('partials.footer')
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 6,
+            spaceBetween: 2,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                320: { slidesPerView: 2 },
+                576: { slidesPerView: 3 },
+                992: { slidesPerView: 6 },
+            },
+        });
+    </script>
+
 </body>
 </html>

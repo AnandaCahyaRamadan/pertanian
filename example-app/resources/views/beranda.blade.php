@@ -1,112 +1,218 @@
 @extends('layouts-user.main')
 
 @section('content')
-<section id="home" class="hero">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-            <img src="https://images.unsplash.com/photo-1560472355-536de3962603" class="d-block w-100" alt="Sawah">
-            <div class="carousel-caption">
-                <h1 class="text-white">Pertanian Modern untuk Negeri</h1>
-                <p>Teknologi inovatif membantu petani lebih produktif dan efisien.</p>
-                <a href="#layanan" class="btn btn-success rounded-pill px-4 mt-3">Jelajahi Layanan</a>
+    <section id="beranda" class="hero">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+            @foreach($banner as $index => $item)
+            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                <img src="{{ asset('storage/' . $item->image) }}" 
+                    class="d-block w-100" 
+                    alt="Banner {{ $index + 1 }}" 
+                    style="height: 500px; object-fit: cover;">
             </div>
+            @endforeach
             </div>
-            <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1473187983305-f615310e7daa" class="d-block w-100" alt="Panen">
-            <div class="carousel-caption">
-                <h1 class="text-white">Inovasi Digital untuk Petani</h1>
-                <p>Solusi berbasis data demi masa depan pertanian Indonesia.</p>
-                <a href="#tentang" class="btn btn-warning rounded-pill px-4 mt-3">Tentang Kami</a>
-            </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
-        </button>
+            </button>
         </div>
     </section>
 
-    <section id="tentang" class="py-5 bg-light">
+    <section id="info" class="py-5 bg-light">
         <div class="container">
-        <div class="section-title">
-            <h2>Tentang Kami</h2>
-        </div>
-        <div class="row align-items-center g-4">
-            <div class="col-lg-6">
-            <img src="https://png.pngtree.com/thumb_back/fh260/background/20250512/pngtree-farmers-working-in-lush-green-rice-field-at-sunset-southeast-asia-image_17269618.jpg" 
-                class="img-fluid rounded-4 shadow-lg" alt="Petani Indonesia">
+            <div class="section-title text-center mb-5">
+            <h2>Balai Besar Pelatihan Pertanian Ketindan</h2>
             </div>
+
+            <div class="row align-items-start g-4">
+            <!-- Kolom kiri (gambar) -->
             <div class="col-lg-6">
-            <h4 class="fw-semibold mb-3">Membangun Pertanian yang Lebih Baik</h4>
-            <p><strong>PertanianMaju</strong> adalah platform digital yang mendukung petani Indonesia dengan solusi berbasis data 
-            dan teknologi modern.</p>
-            <p>Kami menyediakan pelatihan, pemantauan lahan secara real-time, serta akses pasar untuk meningkatkan kesejahteraan petani.</p>
-            <a href="#layanan" class="btn btn-success rounded-pill px-4 mt-2">Pelajari Lebih Lanjut</a>
+                <div class="p-3 bg-white rounded-3 shadow-sm">
+                <img src="{{ asset('image/balaibesar.png') }}"
+                    class="img-fluid rounded-3"
+                    alt="BBPP Ketindan">
+                </div>
             </div>
-        </div>
+
+            <!-- Kolom kanan (tab + isi) -->
+            <div class="col-lg-6">
+                <h4 class=" mb-3">Selayang Pandang</h4>
+                <p>
+                BBPP Ketindan adalah sebuah lembaga Pelatihan Pertanian yang terletak di Lawang,
+                Kabupaten Malang, Provinsi Jawa Timur, Indonesia.
+                </p>
+
+                <!-- Tabs -->
+                <ul class="nav nav-tabs mt-4" id="infoTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="organisasi-tab" data-bs-toggle="tab" data-bs-target="#organisasi" type="button" role="tab">Organisasi</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tugas-tab" data-bs-toggle="tab" data-bs-target="#tugas" type="button" role="tab">Tugas</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="visi-tab" data-bs-toggle="tab" data-bs-target="#visi" type="button" role="tab">Visi</button>
+                </li>
+                </ul>
+
+                <!-- Isi tab -->
+                <div class="tab-content border-start border-end border-bottom p-3 bg-white shadow-sm rounded-bottom" id="infoTabsContent">
+                <div class="tab-pane fade show active" id="organisasi" role="tabpanel">
+                 <p class="text-justify" style="text-align: justify;">
+                    {!! $organisasi->desc ?? 'Belum ada data organisasi yang tersedia.' !!}
+                </p>
+                </div>
+
+                <div class="tab-pane fade" id="tugas" role="tabpanel">
+                    <p>
+                        {!! $tugas->desc ?? 'Belum ada data yang tersedia.' !!}
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="visi" role="tabpanel">
+                    <p>
+                        {!! $visi->desc ?? 'Belum ada data yang tersedia.' !!}
+                    </p>
+                </div>
+                </div>
+            </div>
+            </div>
         </div>
     </section>
 
     <section id="layanan" class="py-5">
         <div class="container">
-        <div class="section-title">
-            <h2>Layanan Kami</h2>
-        </div>
-        <div class="row text-center">
-            <div class="col-md-4 mb-4">
-            <div class="card p-4">
-                <i class="bi bi-mortarboard fs-1 text-success"></i>
-                <h5 class="mt-3">Pelatihan Petani</h5>
-                <p>Kami membantu petani memahami teknologi dan strategi pertanian modern.</p>
+            <div class="section-title text-center">
+                <h2>Inovasi dan Layanan</h2>
             </div>
+            <div class="row text-center justify-content-center mb-4">
+                @foreach($inovasi_layanan as $item)
+                    <div class="col-3 g-3">
+                        <img src="{{ asset('storage/' . $item->image) }}" alt="" class="w-100">
+                        <p class="mt-3 text-dark">
+                            <a href="{{ $item->link }}" class="text-decoration-none fw-bold text-dark">
+                                {{ $item->title }}
+                            </a>
+                        </p>
+                    </div>
+                @endforeach
             </div>
-            <div class="col-md-4 mb-4">
-            <div class="card p-4">
-                <i class="bi bi-cloud-sun fs-1 text-success"></i>
-                <h5 class="mt-3">Monitoring Cuaca</h5>
-                <p>Data cuaca akurat untuk membantu perencanaan dan pengelolaan lahan pertanian.</p>
-            </div>
-            </div>
-            <div class="col-md-4 mb-4">
-            <div class="card p-4">
-                <i class="bi bi-cart4 fs-1 text-success"></i>
-                <h5 class="mt-3">Pemasaran Digital</h5>
-                <p>Mempertemukan petani dengan pembeli melalui platform e-commerce kami.</p>
-            </div>
-            </div>
-        </div>
         </div>
     </section>
 
-    <section id="produk" class="py-5 bg-light">
+    <section id="upt" class="py-5 bg-light position-relative">
         <div class="container">
-        <div class="section-title">
-            <h2>Produk Unggulan</h2>
+            <div class="section-title text-center mb-4">
+                <h2>UPT External</h2>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper mb-4">
+                <div class="swiper-wrapper">
+                    @foreach($upt_external as $item)
+                    <div class="swiper-slide">
+                        <div class="card shadow-sm border-0 text-center m-2 rounded p-2">
+                            <a href="{{ $item->link }}" target="_blank">
+                                <img src="{{ asset('storage/' . $item->image) }}" 
+                                    class="card-img-top mx-auto" 
+                                    alt="UPT Image" 
+                                    style="object-fit: contain;">
+                            </a>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-md-3 mb-4"><div class="card"><img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc" class="card-img-top"><div class="card-body text-center"><h6>Jagung Unggul</h6></div></div></div>
-            <div class="col-md-3 mb-4"><div class="card"><img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc" class="card-img-top"><div class="card-body text-center"><h6>Jagung Unggul</h6></div></div></div>
-            <div class="col-md-3 mb-4"><div class="card"><img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443" class="card-img-top"><div class="card-body text-center"><h6>Pupuk Organik</h6></div></div></div>
-            <div class="col-md-3 mb-4"><div class="card"><img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443" class="card-img-top"><div class="card-body text-center"><h6>Pupuk Organik</h6></div></div></div>
+
+        <!-- Tombol navigasi di luar container -->
+        <div class="swiper-button-prev custom-nav-btn">
+            <i class="fa-solid fa-chevron-left"></i>
         </div>
+        <div class="swiper-button-next custom-nav-btn">
+            <i class="fa-solid fa-chevron-right"></i>
         </div>
     </section>
 
-    <section id="kontak" class="py-5">
-        <div class="container">
-        <div class="section-title">
-            <h2>Hubungi Kami</h2>
-        </div>
-        <form class="col-md-8 mx-auto">
-            <div class="mb-3"><input type="text" class="form-control" placeholder="Nama Anda"></div>
-            <div class="mb-3"><input type="email" class="form-control" placeholder="Email Anda"></div>
-            <div class="mb-3"><textarea class="form-control" rows="4" placeholder="Pesan Anda"></textarea></div>
-            <button class="btn btn-success px-5 py-2 rounded-pill">Kirim Pesan</button>
-        </form>
+    <section id="sosial" class="py-5">
+        <div class="container text-center">
+            <div class="section-title text-center mb-4">
+                <h2>Platform Sosial Media</h2>
+            </div>
+            <div class="row justify-content-center mt-2 mb-4">
+                <!-- Instagram -->
+                <div class="col-md-4 mb-4">
+                    <blockquote 
+                    class="instagram-media" 
+                    data-instgrm-permalink="https://www.instagram.com/bbppketindan_malang/" 
+                    data-instgrm-version="14"
+                    style="max-width: 100%; background:#fff; border-radius:10px; margin:auto;">
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+                </div>
+
+                <!-- X (Twitter) -->
+                <div class="col-md-4 mb-4 ">
+                    <blockquote class="twitter-tweet pt-0">
+                        <a href="https://twitter.com/bbppketindan/status/1978991123067474025?t=N6Z1wtxCG2gbG0ZhfgGh9Q&s=19"></a>
+                    </blockquote>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+
+                <!-- Facebook -->
+                <div class="col-md-4 mb-4">
+                    <div class="fb-page"
+                    data-href="https://www.facebook.com/bbppketindan"
+                    data-tabs="timeline"
+                    data-width="350"
+                    data-height="400"
+                    data-small-header="false"
+                    data-adapt-container-width="true"
+                    data-hide-cover="false"
+                    data-show-facepile="true">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    <div id="fb-root"></div>
+    <section class="alumni-section text-center text-white py-5">
+        <div class="overlay"></div>
+        <div class="container position-relative">
+            <h2 class="fw-bold mb-2">Alumni Pelatihan</h2>
+            <p class="mb-5">Update Agustus 2025</p>
+
+            <div class="row justify-content-center">
+            <div class="col-6 col-md-3 mb-4">
+                <h3 class="fw-bold display-6">2813</h3>
+                <p class="mb-0">Aparatur</p>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <h3 class="fw-bold display-6">9918</h3>
+                <p class="mb-0">Non Aparatur</p>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <h3 class="fw-bold display-6">833</h3>
+                <p class="mb-0">Sertifikasi</p>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <h3 class="fw-bold display-6">4971</h3>
+                <p class="mb-0">Kerjasama</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"
+        nonce="FBSDK">
+    </script>
+
 @endsection
