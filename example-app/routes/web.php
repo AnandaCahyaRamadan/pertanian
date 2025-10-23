@@ -23,7 +23,8 @@ use App\Http\Controllers\{
     PelatihanController,
     ProgramAnggaranController,
     SaranaPrasaranaController,
-    SaranaPrasaranaSliderController
+    SaranaPrasaranaSliderController,
+    SkemaSertifikasiController
 };
 use App\Models\Keahlian;
 
@@ -246,4 +247,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/pelatihan/edit/{id}', [PelatihanController::class, 'edit'])->name('pelatihan.edit');
     Route::put('/dashboard/pelatihan/update/{id}', [PelatihanController::class, 'update'])->name('pelatihan.update');
     Route::delete('/dashboard/pelatihan/delete/{id}', [PelatihanController::class, 'destroy'])->name('pelatihan.destroy');
+
+    // =============================
+    // SKEMA SERTIFIKASI
+    // =============================
+    Route::get('/dashboard/skema-sertifikasi', [SkemaSertifikasiController::class, 'index'])->name('skema_sertifikasi.index');
+    Route::get('/dashboard/skema-sertifikasi/create', [SkemaSertifikasiController::class, 'create'])->name('skema_sertifikasi.create');
+    Route::post('/dashboard/skema-sertifikasi/store', [SkemaSertifikasiController::class, 'store'])->name('skema_sertifikasi.store');
+    Route::get('/dashboard/skema-sertifikasi/edit/{id}', [SkemaSertifikasiController::class, 'edit'])->name('skema_sertifikasi.edit');
+    Route::put('/dashboard/skema-sertifikasi/update/{id}', [SkemaSertifikasiController::class, 'update'])->name('skema_sertifikasi.update');
+    Route::delete('/dashboard/skema-sertifikasi/delete/{id}', [SkemaSertifikasiController::class, 'destroy'])->name('skema_sertifikasi.destroy');
 });

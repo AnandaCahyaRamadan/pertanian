@@ -118,7 +118,7 @@
         </li>
 
         <li class="nav-item">
-            <a href="skema_sertifikasi.html" class="nav-link">
+            <a href="{{ route('skema_sertifikasi.index') }}" class="nav-link {{ Request::is('dashboard/skema-sertifikasi*') ? 'active' : '' }}">
                 <i class="fas fa-project-diagram nav-icon"></i> <!-- ikon skema/proyek -->
                 <p>Skema Sertifikasi</p>
             </a>
