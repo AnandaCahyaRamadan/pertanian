@@ -294,6 +294,16 @@
         .fc-button:hover {
             background-color: #145a32;
         }
+
+        .bg-success {
+            background-color: #3e7712 !important;
+        }
+        .btn-success {
+            background-color: #3e7712 !important;
+        }
+        .bg-success {
+            background-color: #3e7712 !important;
+        }
     </style>
 </head>
 <body>

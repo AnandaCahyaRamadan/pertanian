@@ -16,10 +16,10 @@
                 </ul>
             </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Kerja Sama</a>
+                <a class="nav-link dropdown-toggle {{ Request::is('program-dan-kerjasama') || Request::is('sarana-dan-prasarana')  ? 'active' : '' }}" href="#" data-bs-toggle="dropdown">Kerja Sama</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Program dan Kerjasama</a></li>
-                    <li><a class="dropdown-item" href="#">Sarana dan Prasarana</a></li>
+                    <li><a class="dropdown-item" href="/program-dan-kerjasama">Program dan Kerjasama</a></li>
+                    <li><a class="dropdown-item" href="/sarana-dan-prasarana">Sarana dan Prasarana</a></li>
                 </ul>
             </li>
             </li>

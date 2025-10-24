@@ -26,7 +26,7 @@
       <ul class="list-unstyled">
         <li><a href="/"><i class="fas fa-angle-right me-2"></i> Beranda</a></li>
         <li><a href="/pelatihan"><i class="fas fa-angle-right me-2"></i> Pelatihan</a></li>
-        <li><a href="#"><i class="fas fa-angle-right me-2"></i> Kerja Sama</a></li>
+        <li><a href="/program-dan-kerjasama"><i class="fas fa-angle-right me-2"></i> Kerja Sama</a></li>
         <li><a href="#"><i class="fas fa-angle-right me-2"></i> PPID</a></li>
         {{-- <li><a href="#"><i class="fas fa-angle-right me-2"></i> Program dan Anggaran</a></li> --}}
         {{-- <li><a href="#"><i class="fas fa-angle-right me-2"></i> Peta</a></li> --}}
