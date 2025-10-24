@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Helpers\VisitorHelper;
+use App\Models\ProgramAnggaran;
 use App\Models\SaranaPrasarana;
 use App\Models\SaranaPrasaranaSlider;
 
@@ -11,6 +12,13 @@ class KerjasamaController extends Controller
 {
     public function programDanKerjasama() {
 
+        $programs = ProgramAnggaran::with('jenis')->get();
+        $visitorData = VisitorHelper::getFooterAndVisitor();
+
+        return view('program_kerjasama', array_merge(
+            compact('programs'),
+            $visitorData
+        ));
     }
 
     public function SaranaPrasarana() {
