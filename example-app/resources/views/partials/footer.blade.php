@@ -1,7 +1,7 @@
 <footer style="padding:50px 0;">
   <div class="container">
     <div class="row">
-        <div class="col-md-4 mb-4 pr-0">
+        <div class="col-md-5 mb-4 pr-0">
         <h5>Tentang Kami</h5>
         <div class="d-flex justify-content-start align-items-center mt-2 mb-4 flex-wrap" style="gap: 10px;">
           <img src="{{ asset('image/kementan.png') }}" alt="Kementan" style="height: 40px;">
@@ -21,7 +21,7 @@
     </div>
 
       <!-- Menu -->
-     <div class="col-md-3 mb-4 pr-0">
+     <div class="col-md-2 mb-4 pr-0">
       <h5>Menu</h5>
       <ul class="list-unstyled">
         <li><a href="/"><i class="fas fa-angle-right me-2"></i> Beranda</a></li>
