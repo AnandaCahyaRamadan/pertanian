@@ -24,10 +24,10 @@
             </li>
             </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">PPID</a>
+                <a class="nav-link dropdown-toggle {{ Request::is('infografis-ppid') || Request::is('dokumen-ppid')  ? 'active' : '' }}" href="#" data-bs-toggle="dropdown">PPID</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Infografis</a></li>
-                    <li><a class="dropdown-item" href="#">Dokumen PPID</a></li>
+                    <li><a class="dropdown-item" href="/infografis-ppid">Infografis</a></li>
+                    <li><a class="dropdown-item" href="/dokumen-ppid">Dokumen PPID</a></li>
                 </ul>
             </li>
             {{-- <li class="nav-item"><a class="nav-link" href="#">Program dan Anggaran</a></li>

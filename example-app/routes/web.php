@@ -25,6 +25,7 @@ use App\Http\Controllers\{
     KerjasamaController,
     PelatihanController,
     PenyelenggraPelatihanController,
+    PPIDController,
     ProgramAnggaranController,
     SaranaPrasaranaController,
     SaranaPrasaranaSliderController,
@@ -37,6 +38,8 @@ Route::get('/skema-sertifikasi', [PenyelenggraPelatihanController::class, 'skema
 Route::get('/agenda/events', [PenyelenggraPelatihanController::class, 'getEvents'])->name('agenda.events');
 Route::get('/program-dan-kerjasama', [KerjasamaController::class, 'programDanKerjasama']);
 Route::get('/sarana-dan-prasarana', [KerjasamaController::class, 'SaranaPrasarana']);
+Route::get('/dokumen-ppid', [PPIDController::class, 'dokumenPPID']);
+Route::get('/infografis-ppid', [PPIDController::class, 'infografisPPID']);
 
 // Route login & logout (bebas diakses)
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login')->middleware('guest');
