@@ -189,7 +189,7 @@
                     data-href="https://www.facebook.com/humasbbppbinuang/?locale=id_ID"
                     data-tabs="timeline"
                     data-width="320"
-                    data-height="440"
+                    data-height="435"
                     data-small-header="false"
                     data-adapt-container-width="true"
                     data-hide-cover="false"
