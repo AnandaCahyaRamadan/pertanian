@@ -178,7 +178,7 @@
     document.addEventListener("DOMContentLoaded", function() {
 
         setTimeout(function() {
-            speak("Selamat datang di Balai Besar Pelatihan Pertanian Binuang");
+            speak("Selamat datang di Website Balai Besar Pelatihan Pertanian Binuang");
         }, 800);
 
     });

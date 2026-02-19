@@ -45,7 +45,7 @@
                         Agenda</a>
                 </li>
 
-                <li class="nav-item"><a class="nav-link" href="{{url('')}}" data-voice="Kontak">Kontak</a></li>
+                <li class="nav-item"><a class="nav-link {{ Request::is('kontak*') ? 'active' : '' }}" href="{{url('kontak')}}" data-voice="Kontak">Kontak</a></li>
 
             </ul>
         </div>

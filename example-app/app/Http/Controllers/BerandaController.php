@@ -119,7 +119,7 @@ class BerandaController extends Controller
         return view('profil.visimisi', compact('mingguIni', 'bulanIni', 'tahunIni', 'total', 'banner', 'organisasi', 'tugas', 'visi', 'inovasi_layanan', 'upt_external', 'footer'));
     }
 
-      public function tugas()
+    public function tugas()
     {
         $ip = request()->ip(); // ambil IP pengunjung
         $today = Carbon::today();
@@ -151,7 +151,7 @@ class BerandaController extends Controller
     }
 
 
-      public function profilpejabat()
+    public function profilpejabat()
     {
         $ip = request()->ip(); // ambil IP pengunjung
         $today = Carbon::today();
@@ -182,7 +182,7 @@ class BerandaController extends Controller
         return view('profil.profilpejabat', compact('mingguIni', 'bulanIni', 'tahunIni', 'total', 'banner', 'organisasi', 'tugas', 'visi', 'inovasi_layanan', 'upt_external', 'footer'));
     }
 
-        public function struktur()
+    public function struktur()
     {
         $ip = request()->ip(); // ambil IP pengunjung
         $today = Carbon::today();
@@ -213,7 +213,7 @@ class BerandaController extends Controller
         return view('profil.struktur', compact('mingguIni', 'bulanIni', 'tahunIni', 'total', 'banner', 'organisasi', 'tugas', 'visi', 'inovasi_layanan', 'upt_external', 'footer'));
     }
 
-        public function dasarhukum()
+    public function dasarhukum()
     {
         $ip = request()->ip(); // ambil IP pengunjung
         $today = Carbon::today();
@@ -244,7 +244,8 @@ class BerandaController extends Controller
         return view('profil.dasarhukum', compact('mingguIni', 'bulanIni', 'tahunIni', 'total', 'banner', 'organisasi', 'tugas', 'visi', 'inovasi_layanan', 'upt_external', 'footer'));
     }
 
-    public function lhkpn() {
+    public function lhkpn()
+    {
 
         $programs = ProgramAnggaran::with('jenis')->get();
         $visitorData = VisitorHelper::getFooterAndVisitor();
@@ -255,5 +256,36 @@ class BerandaController extends Controller
             compact('programs'),
             $visitorData
         ));
-}
+    }
+
+    public function kontak()
+    {
+         $ip = request()->ip(); // ambil IP pengunjung
+        $today = Carbon::today();
+        $exists = Visitor::where('ip_address', $ip)
+            ->whereDate('visited_at', $today)
+            ->exists();
+        if (!$exists) {
+            Visitor::create([
+                'ip_address' => $ip,
+                'visited_at' => now(),
+            ]);
+        }
+
+        $mingguIni = Visitor::whereBetween('visited_at', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])->count();
+        $bulanIni  = Visitor::whereMonth('visited_at', Carbon::now()->month)
+            ->whereYear('visited_at', Carbon::now()->year)
+            ->count();
+        $tahunIni  = Visitor::whereYear('visited_at', Carbon::now()->year)->count();
+        $total     = Visitor::count();
+
+        $banner = Banner::all();
+        $organisasi = Organisasi::first();
+        $tugas = Task::first();
+        $visi = Visi::first();
+        $inovasi_layanan = InovasiLayanan::all();
+        $upt_external = UptExternal::all();
+        $footer = About::first();
+        return view('kontak', compact('mingguIni', 'bulanIni', 'tahunIni', 'total', 'banner', 'organisasi', 'tugas', 'visi', 'inovasi_layanan', 'upt_external', 'footer'));
+    }
 }

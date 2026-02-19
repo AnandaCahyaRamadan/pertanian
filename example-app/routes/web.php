@@ -33,6 +33,7 @@ use App\Http\Controllers\{
 };
 
 Route::get('/', [BerandaController::class, 'index'])->name('index');
+Route::get('/kontak', [BerandaController::class, 'kontak'])->name('kontak');
 Route::get('/pelatihan', [PenyelenggraPelatihanController::class, 'pelatihan']);
 Route::get('/skema-sertifikasi', [PenyelenggraPelatihanController::class, 'skemaSertifikasi']);
 Route::get('/agenda/events', [PenyelenggraPelatihanController::class, 'getEvents'])->name('agenda.events');
