@@ -4,26 +4,26 @@
 <section id="program-anggaran" class="py-5 bg-light">
     <div class="container">
         <div class="section-title text-center mb-5">
-            <h2 class="fw-bold">Informasi Program</h2>
-            <p class="text-muted">Dokumen resmi perencanaan dan kinerja lembaga.</p>
+            <h2 class="fw-bold">LHKPN - LHKASN</h2>
+            <p class="text-muted">LHKPN (Laporan Harta Kekayaan Penyelenggara Negara) dan LHKASN (Laporan Harta Kekayaan Aparatur Sipil Negara)</p>
         </div>
 
         {{-- Loop per jenis program --}}
         @foreach($programs->groupBy('jenis.jenis') as $jenisNama => $items)
-        @if($jenisNama != 'LHKPN-ASN')
-
+        @if($jenisNama == 'LHKPN-ASN')
         <div class="mb-5">
             <!-- Header jenis -->
             <div class="bg-success text-white px-4 py-2 rounded-top d-flex align-items-center shadow-sm">
                 <i class="bi bi-journal-text me-2"></i>
                 <h5 class="m-0 fw-semibold">{{ $jenisNama }}</h5>
             </div>
+           
 
             <!-- Daftar dokumen -->
             <div class="bg-white border rounded-bottom p-4 shadow-sm">
                 <div class="row justify-content-center g-4">
                     @foreach($items as $item)
-                     @if($item->jenis_program_anggaran_id != 7)
+                        @if($item->jenis_program_anggaran_id == 7)
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 hover-card">
                             <div class="card-body text-center">
@@ -44,8 +44,7 @@
                 </div>
             </div>
         </div>
-                    @endif
-
+         @endif
         @endforeach
     </div>
 </section>

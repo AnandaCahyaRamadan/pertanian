@@ -26,7 +26,7 @@ class KerjasamaController extends Controller
         $sliders = SaranaPrasaranaSlider::all();
         $visitorData = VisitorHelper::getFooterAndVisitor();
 
-        return view('sarana_prasarana', array_merge(
+        return view('profil.sarana_prasarana', array_merge(
             compact('sarana_prasarana','sliders'),
             $visitorData
         ));

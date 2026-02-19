@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #007B2E;">
   <!-- Brand Logo -->
   <a href="#" class="brand-link">
     <img src="{{ asset('image/binuang.png') }}" alt="" style="width: 200px">
@@ -45,12 +45,12 @@
         </li>
 
         <!-- Program dan Anggaran -->
-        <li class="nav-header">DATA PROGRAM & ANGGARAN</li>
+        <li class="nav-header">DATA PELAPORAN</li>
         <li class="nav-item {{ Request::is('dashboard/jenis-program-anggaran*') ||  Request::is('dashboard/program-anggaran*') ? 'menu-open' : '' }}">
           <a href="#" class="nav-link {{ Request::is('dashboard/jenis-program-anggaran*') ||  Request::is('dashboard/program-anggaran*') ? 'active' : '' }}">
               <i class="nav-icon fas fa-warehouse"></i>
               <p>
-                  Program dan Anggaran
+                  LAPORAN
                   <i class="fas fa-angle-left right"></i>
               </p>
           </a>
@@ -64,7 +64,7 @@
               <li class="nav-item">
                   <a href="{{ route('program_anggaran.index') }}" class="nav-link {{ Request::is('dashboard/program-anggaran*') ? 'active' : '' }}">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Program dan Anggaran</p>
+                      <p>Pelaporan</p>
                   </a>
               </li>
           </ul>

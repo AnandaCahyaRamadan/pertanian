@@ -30,8 +30,8 @@
 
                                 <a href="{{ asset('storage/' . $item->file) }}" 
                                    target="_blank" 
-                                   class="btn btn-dark btn-sm rounded-pill w-100 d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-download me-2"></i> Download
+                                   class="btn btn-warning btn-sm rounded-pill w-100 d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-download me-2"></i> Lihat Dokumen
                                 </a>
                             </div>
                         </div>

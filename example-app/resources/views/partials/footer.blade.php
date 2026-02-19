@@ -13,10 +13,10 @@
           {!! $footer->desc !!}
         </p>
         <div>
-            <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.facebook.com/humasbbppbinuang/?locale=id_ID" target="_blank" class="social-icon"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/bbppbinuang" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.tiktok.com/@bbpp.binuang" target="_blank" class="social-icon"><i class="bi bi-tiktok"></i></a>
+            <a href="https://www.youtube.com/c/BBPPBinuang" target="_blank" class="social-icon"><i class="bi bi-youtube"></i></a>
         </div>
     </div>
 
@@ -24,13 +24,12 @@
      <div class="col-md-2 mb-4 pr-0">
       <h5>Menu</h5>
       <ul class="list-unstyled">
-        <li><a href="/"><i class="fas fa-angle-right me-2"></i> Beranda</a></li>
-        <li><a href="/pelatihan"><i class="fas fa-angle-right me-2"></i> Pelatihan</a></li>
-        <li><a href="/program-dan-kerjasama"><i class="fas fa-angle-right me-2"></i> Kerja Sama</a></li>
-        <li><a href="#"><i class="fas fa-angle-right me-2"></i> PPID</a></li>
-        {{-- <li><a href="#"><i class="fas fa-angle-right me-2"></i> Program dan Anggaran</a></li> --}}
-        {{-- <li><a href="#"><i class="fas fa-angle-right me-2"></i> Peta</a></li> --}}
-        <li><a href="#"><i class="fas fa-angle-right me-2"></i> Tentang Kami</a></li>
+        <li><a href="{{url('')}}"><i class="fas fa-angle-right me-2"></i> Beranda</a></li>
+        <li><a href="{{url('dokumen-ppid')}}"><i class="fas fa-angle-right me-2"></i> Dokumen PPID</a></li>
+        <li><a href="{{url('infografis-ppid')}}"><i class="fas fa-angle-right me-2"></i> Infografis PPID</a></li>
+        <li><a href="{{url('')}}"><i class="fas fa-angle-right me-2"></i> Tentang Kami</a></li>
+    
+        <!-- <li><a href="{{url('ppi')}}"><i class="fas fa-angle-right me-2"></i> Tentang Kami</a></li> -->
       </ul>
     </div>
 
@@ -58,7 +57,7 @@
     </div>
 
     <div class="footer-bottom text-center mt-4">
-      <p class="mb-0">©copyright 2025</p>
+      <p class="mb-0" id="c"></p>
     </div>
   </div>
 </footer>

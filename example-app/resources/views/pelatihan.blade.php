@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- ===== PELATIH SECTION ===== -->
-<section id="pelatihan" class="py-5 bg-light">
+<!-- <section id="pelatihan" class="py-5 bg-light">
     <div class="container mb-5">
         <div class="text-center mb-5" data-aos="fade-up" data-aos-duration="800">
             <h2 class="fw-bold">Pelatih Profesional</h2>
@@ -38,7 +38,7 @@
             @endforeach
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- ===== AGENDA SECTION ===== -->
 <section class="py-5 bg-white position-relative">

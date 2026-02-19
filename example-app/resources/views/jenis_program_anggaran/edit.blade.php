@@ -3,7 +3,7 @@
 @section('content')
 <div class="content-header">
   <div class="container-fluid">
-    <h1 class="m-0">Edit Jenis Program Anggaran</h1>
+    <h1 class="m-0">Edit Jenis</h1>
   </div>
 </div>
 

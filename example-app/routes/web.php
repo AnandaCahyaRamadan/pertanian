@@ -36,10 +36,23 @@ Route::get('/', [BerandaController::class, 'index'])->name('index');
 Route::get('/pelatihan', [PenyelenggraPelatihanController::class, 'pelatihan']);
 Route::get('/skema-sertifikasi', [PenyelenggraPelatihanController::class, 'skemaSertifikasi']);
 Route::get('/agenda/events', [PenyelenggraPelatihanController::class, 'getEvents'])->name('agenda.events');
-Route::get('/program-dan-kerjasama', [KerjasamaController::class, 'programDanKerjasama']);
-Route::get('/sarana-dan-prasarana', [KerjasamaController::class, 'SaranaPrasarana']);
+Route::get('/informasi-program', [KerjasamaController::class, 'programDanKerjasama']);
 Route::get('/dokumen-ppid', [PPIDController::class, 'dokumenPPID']);
 Route::get('/infografis-ppid', [PPIDController::class, 'infografisPPID']);
+
+Route::prefix('profil')->group(function () {
+Route::get('/sejarah', [BerandaController::class, 'sejarah'])->name('sejarah');
+Route::get('/visi-misi', [BerandaController::class, 'visi'])->name('visi');
+Route::get('/dasar-hukum', [BerandaController::class, 'dasarhukum'])->name('dasarhukum');
+Route::get('/profil-pejabat', [BerandaController::class, 'profilpejabat'])->name('profil_pejabat');
+Route::get('/lhkpn-lhkasn', [BerandaController::class, 'lhkpn'])->name('lhkpn');
+Route::get('/sarana-prasarana', [KerjasamaController::class, 'SaranaPrasarana'])->name('sarana');
+Route::get('/struktur-organisasi', [BerandaController::class, 'struktur'])->name('struktur');
+Route::get('/tugas-fungsi', [BerandaController::class, 'tugas'])->name('tugas');
+Route::get('/sejarah', [BerandaController::class, 'sejarah'])->name('sejarah');
+
+});
+
 
 // Route login & logout (bebas diakses)
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login')->middleware('guest');
