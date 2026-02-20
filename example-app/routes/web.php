@@ -37,9 +37,17 @@ Route::get('/kontak', [BerandaController::class, 'kontak'])->name('kontak');
 Route::get('/pelatihan', [PenyelenggraPelatihanController::class, 'pelatihan']);
 Route::get('/skema-sertifikasi', [PenyelenggraPelatihanController::class, 'skemaSertifikasi']);
 Route::get('/agenda/events', [PenyelenggraPelatihanController::class, 'getEvents'])->name('agenda.events');
-Route::get('/informasi-program', [KerjasamaController::class, 'programDanKerjasama']);
-Route::get('/dokumen-ppid', [PPIDController::class, 'dokumenPPID']);
-Route::get('/infografis-ppid', [PPIDController::class, 'infografisPPID']);
+
+
+Route::prefix('informasi-publik')->group(function () {
+Route::get('/kinerja', [BerandaController::class, 'kinerja'])->name('kinerja');
+Route::get('/keuangan', [BerandaController::class, 'keuangan'])->name('keuangan');
+Route::get('/pengadaan-barang-jasa', [BerandaController::class, 'pbj'])->name('pbj');
+Route::get('/informasi-program', [KerjasamaController::class, 'programDanKerjasama'])->name('informasi-program');
+Route::get('/dokumen-ppid', [PPIDController::class, 'dokumenPPID'])->name('dokumen-ppid');
+Route::get('/infografis-ppid', [PPIDController::class, 'infografisPPID'])->name('infografis-ppid');
+
+});
 
 Route::prefix('profil')->group(function () {
 Route::get('/sejarah', [BerandaController::class, 'sejarah'])->name('sejarah');

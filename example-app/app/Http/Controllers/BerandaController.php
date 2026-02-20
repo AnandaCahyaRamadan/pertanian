@@ -260,32 +260,48 @@ class BerandaController extends Controller
 
     public function kontak()
     {
-         $ip = request()->ip(); // ambil IP pengunjung
-        $today = Carbon::today();
-        $exists = Visitor::where('ip_address', $ip)
-            ->whereDate('visited_at', $today)
-            ->exists();
-        if (!$exists) {
-            Visitor::create([
-                'ip_address' => $ip,
-                'visited_at' => now(),
-            ]);
-        }
+       
+         $visitorData = VisitorHelper::getFooterAndVisitor();
 
-        $mingguIni = Visitor::whereBetween('visited_at', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])->count();
-        $bulanIni  = Visitor::whereMonth('visited_at', Carbon::now()->month)
-            ->whereYear('visited_at', Carbon::now()->year)
-            ->count();
-        $tahunIni  = Visitor::whereYear('visited_at', Carbon::now()->year)->count();
-        $total     = Visitor::count();
+        return view('kontak', array_merge(
+           
+            $visitorData
+        ));
+    }
 
-        $banner = Banner::all();
-        $organisasi = Organisasi::first();
-        $tugas = Task::first();
-        $visi = Visi::first();
-        $inovasi_layanan = InovasiLayanan::all();
-        $upt_external = UptExternal::all();
-        $footer = About::first();
-        return view('kontak', compact('mingguIni', 'bulanIni', 'tahunIni', 'total', 'banner', 'organisasi', 'tugas', 'visi', 'inovasi_layanan', 'upt_external', 'footer'));
+    //kinerja
+    public function kinerja()
+    {
+
+        $programs = ProgramAnggaran::with('jenis')->get();
+        $visitorData = VisitorHelper::getFooterAndVisitor();
+
+        return view('informasi_publik.kinerja', array_merge(
+            compact('programs'),
+            $visitorData
+        ));
+    }
+
+    public function keuangan()
+    {
+
+        $programs = ProgramAnggaran::with('jenis')->get();
+        $visitorData = VisitorHelper::getFooterAndVisitor();
+
+        return view('informasi_publik.keuangan', array_merge(
+            compact('programs'),
+            $visitorData
+        ));
+    }
+    public function pbj()
+    {
+
+        $programs = ProgramAnggaran::with('jenis')->get();
+        $visitorData = VisitorHelper::getFooterAndVisitor();
+
+        return view('informasi_publik.pbj', array_merge(
+            compact('programs'),
+            $visitorData
+        ));
     }
 }

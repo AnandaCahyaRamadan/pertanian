@@ -30,11 +30,12 @@
                     Request::is('sarana-dan-prasarana')  ? 'active' : '' }}" 
                     href="#" data-bs-toggle="dropdown" data-voice="">Informasi Publik</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{url('informasi-program')}}">Informasi Program</a></li>
-                        <li><a class="dropdown-item" href="{{url('')}}">Kinerja</a></li>
-                        <li><a class="dropdown-item" href="{{url('')}}">Keuangan</a></li>
-                        <li><a class="dropdown-item" href="{{url('dokumen-ppid')}}" >PPID</a></li>
-                        <li><a class="dropdown-item" href="{{url('')}}" data-voice="Pengadaan Barang Jasa">Pengadaan Barang Jasa</a></li>
+                        <li><a class="dropdown-item" href="{{route('informasi-program')}}">Informasi Program</a></li>
+                        <li><a class="dropdown-item" href="{{route('kinerja')}}">Kinerja</a></li>
+                        <li><a class="dropdown-item" href="{{route('keuangan')}}">Keuangan</a></li>
+                        <li><a class="dropdown-item" href="{{route('dokumen-ppid')}}" >PPID</a></li>
+                        <li><a class="dropdown-item" href="{{route('infografis-ppid')}}" >Dokumen PPID</a></li>
+                        <li><a class="dropdown-item" href="{{route('pbj')}}" data-voice="Pengadaan Barang Jasa">Pengadaan Barang Jasa</a></li>
                     </ul>
                 </li>
                 
