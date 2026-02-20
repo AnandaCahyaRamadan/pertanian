@@ -1,37 +1,8 @@
 <?php
 
+use App\Http\Controllers\{ AuthController, RoleController, TaskController, UserController, VisiController, AboutController, BannerController, BerandaController, DashboardController, DokumenPPIDController, InfografisPPIDController, PegawaiController, OrganisasiController, SocialMediaController, UptExternalController, InovasiLayananController, JadwalAgendaController, JenisPPIDController, JenisProgramAnggaranController, KeahlianController, KerjasamaController, PelatihanController, PenyelenggraPelatihanController, PPIDController, ProgramAnggaranController, SaranaPrasaranaController, SaranaPrasaranaSliderController, SkemaSertifikasiController, TagController };
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{
-    AuthController,
-    RoleController,
-    TaskController,
-    UserController,
-    VisiController,
-    AboutController,
-    BannerController,
-    BerandaController,
-    DashboardController,
-    DokumenPPIDController,
-    InfografisPPIDController,
-    PegawaiController,
-    OrganisasiController,
-    SocialMediaController,
-    UptExternalController,
-    InovasiLayananController,
-    JadwalAgendaController,
-    JenisPPIDController,
-    JenisProgramAnggaranController,
-    KeahlianController,
-    KerjasamaController,
-    PelatihanController,
-    PenyelenggraPelatihanController,
-    PPIDController,
-    ProgramAnggaranController,
-    SaranaPrasaranaController,
-    SaranaPrasaranaSliderController,
-    SkemaSertifikasiController,
-    TagController
-};
 
 Route::get('/', [BerandaController::class, 'index'])->name('index');
 Route::get('/kontak', [BerandaController::class, 'kontak'])->name('kontak');
@@ -186,6 +157,11 @@ Route::middleware(['auth','role:Admin'])->group(function () {
     // TAG
     // =============================
     Route::resource('/dashboard/tags', TagController::class);
+
+    // =============================
+    // CATEGORY
+    // =============================
+    Route::resource('/dashboard/categories', CategoryController::class);
 });
 
 
