@@ -549,18 +549,6 @@
     @yield('js')
 
 
-
-    <script>
-        // function speak(text) {
-        //     const msg = new SpeechSynthesisUtterance();
-        //     msg.text = text;
-        //     msg.lang = "id-ID"; // bahasa Indonesia
-        //     msg.rate = 1;
-        //     msg.pitch = 1;
-
-        //     window.speechSynthesis.speak(msg);
-        // }
-    </script>
     <script>
         function speak(text) {
             if (!text) return;
@@ -572,20 +560,20 @@
             window.speechSynthesis.speak(msg);
         }
 
-        /* aktifkan audio setelah user klik */
+      
         document.addEventListener('click', function() {
             speak("mode suara aktif");
         }, {
             once: true
         });
 
-        /* hover navbar global (tidak tergantung bootstrap / laravel render) */
+   
         document.addEventListener('mousemove', function(e) {
 
             const menu = e.target.closest('.nav-link, .dropdown-item');
             if (!menu) return;
 
-            if (menu.dataset.speaking) return; // supaya tidak spam
+            if (menu.dataset.speaking) return; 
 
             menu.dataset.speaking = "1";
 

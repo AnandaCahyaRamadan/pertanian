@@ -18,16 +18,32 @@
 <script src="{{ asset ('dist/js/demo.js') }}"></script>
 <script src="{{ asset ('dist/js/pages/dashboard.js') }}"></script>
 <script>
-  $(function () {
-    $('#data-table').DataTable({
+  $(function() {
+    var table = $('#data-table').DataTable({
       "paging": true,
-      "lengthChange": false,
+      "lengthChange": true,
       "searching": true,
       "ordering": true,
       "info": true,
       "autoWidth": false,
       "responsive": true,
+
+      pageLength: 10, // default tampil 10
+      lengthMenu: [10, 20, 50, 100], // pilihan jumlah data
+      order: [
+        [2, 'asc']
+      ],
+      columnDefs: [
+      { orderable: false, targets: 0 } // kolom No tidak bisa disort
+    ]
+
     });
+    table.on('order.dt search.dt', function () {
+      table.column(0, { search:'applied', order:'applied' }).nodes()
+      .each(function (cell, i) {
+          cell.innerHTML = i + 1;
+      });
+  }).draw();
   });
 </script>
 <!-- DataTables  & Plugins -->
@@ -38,16 +54,16 @@
 <script src="{{ asset ('plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 <script>
-    $(document).ready(function() {
-      $('#desc').summernote({
-        height: 200,
-        placeholder: 'Tulis deskripsi..',
-        toolbar: [
-          ['style', ['bold', 'italic', 'underline', 'clear']],
-          ['para', ['ul', 'ol', 'paragraph']],
-          ['insert', ['link']],
-          ['view', ['codeview']]
-        ]
-      });
+  $(document).ready(function() {
+    $('#desc').summernote({
+      height: 200,
+      placeholder: 'Tulis deskripsi..',
+      toolbar: [
+        ['style', ['bold', 'italic', 'underline', 'clear']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['insert', ['link']],
+        ['view', ['codeview']]
+      ]
     });
+  });
 </script>
