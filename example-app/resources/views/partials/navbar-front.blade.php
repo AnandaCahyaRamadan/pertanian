@@ -7,7 +7,7 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav me-3">
-                <li class="nav-item"><a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{url('/')}}"data-voice="Beranda">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{url('/')}}" data-voice="Beranda">Beranda</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {{ Request::is('profil*') || Request::is('profil*')  ? 'active' :
                      '' }}" href="#" data-bs-toggle="dropdown" data-voice="">
@@ -27,22 +27,23 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {{ Request::is('informasi-program') || 
-                    Request::is('sarana-dan-prasarana')  ? 'active' : '' }}" 
-                    href="#" data-bs-toggle="dropdown" data-voice="">Informasi Publik</a>
+                    Request::is('sarana-dan-prasarana')  ? 'active' : '' }}"
+                        href="#" data-bs-toggle="dropdown" data-voice="">Informasi Publik</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{route('informasi-program')}}">Informasi Program</a></li>
                         <li><a class="dropdown-item" href="{{route('kinerja')}}">Kinerja</a></li>
                         <li><a class="dropdown-item" href="{{route('keuangan')}}">Keuangan</a></li>
-                        <li><a class="dropdown-item" href="{{route('dokumen-ppid')}}" >PPID</a></li>
-                        <li><a class="dropdown-item" href="{{route('infografis-ppid')}}" >Dokumen PPID</a></li>
+                        <li><a class="dropdown-item" href="{{route('infografis-ppid')}}">PPID</a></li>
+
+                        <li><a class="dropdown-item" href="{{route('dokumen-ppid')}}">Dokumen PPID</a></li>
                         <li><a class="dropdown-item" href="{{route('pbj')}}" data-voice="Pengadaan Barang Jasa">Pengadaan Barang Jasa</a></li>
                     </ul>
                 </li>
-                
+
 
                 <li class="nav-item"><a class="nav-link" href="{{url('')}}">Berita</a></li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('pelatihan*') ? 'active' : '' }}" href="{{url('pelatihan')}}"data-voice="Agenda">
+                    <a class="nav-link {{ Request::is('pelatihan*') ? 'active' : '' }}" href="{{url('pelatihan')}}" data-voice="Agenda">
                         Agenda</a>
                 </li>
 

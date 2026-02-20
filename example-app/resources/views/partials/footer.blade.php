@@ -27,7 +27,7 @@
         <li><a href="{{url('')}}"><i class="fas fa-angle-right me-2"></i> Beranda</a></li>
         <li><a href="{{url('dokumen-ppid')}}"><i class="fas fa-angle-right me-2"></i> Dokumen PPID</a></li>
         <li><a href="{{url('infografis-ppid')}}"><i class="fas fa-angle-right me-2"></i> Infografis PPID</a></li>
-        <li><a href="{{url('')}}"><i class="fas fa-angle-right me-2"></i> Tentang Kami</a></li>
+        <li><a href="{{url('kontak')}}"><i class="fas fa-angle-right me-2"></i> Kontak</a></li>
     
         <!-- <li><a href="{{url('ppi')}}"><i class="fas fa-angle-right me-2"></i> Tentang Kami</a></li> -->
       </ul>
