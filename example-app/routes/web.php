@@ -29,7 +29,8 @@ use App\Http\Controllers\{
     ProgramAnggaranController,
     SaranaPrasaranaController,
     SaranaPrasaranaSliderController,
-    SkemaSertifikasiController
+    SkemaSertifikasiController,
+    TagController
 };
 
 Route::get('/', [BerandaController::class, 'index'])->name('index');
@@ -180,6 +181,11 @@ Route::middleware(['auth','role:Admin'])->group(function () {
     Route::get('/dashboard/pegawai/{id}/edit', [PegawaiController::class, 'edit'])->name('pegawai.edit');
     Route::put('/dashboard/pegawai/{id}', [PegawaiController::class, 'update'])->name('pegawai.update');
     Route::delete('/dashboard/pegawai/{id}', [PegawaiController::class, 'destroy'])->name('pegawai.destroy');
+
+    // =============================
+    // TAG
+    // =============================
+    Route::resource('/dashboard/tags', TagController::class);
 });
 
 

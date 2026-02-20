@@ -135,6 +135,7 @@
         @if (Auth::user()->role->name === "Admin")
         <!-- Master Data -->
         <li class="nav-header">MASTER DATA</li>
+        <li class="nav-item"><a href="{{ route('tags.index') }}" class="nav-link {{ Request::is('dashboard/tags*') ? 'active' : '' }}"><i class="nav-icon fas fa-tag"></i><p>Tag</p></a></li>
         <li class="nav-item"><a href="{{ route('users.index') }}" class="nav-link {{ Request::is('dashboard/users*') ? 'active' : '' }}"><i class="nav-icon fas fa-user"></i><p>User</p></a></li>
         <li class="nav-item"><a href="{{ route('roles.index') }}" class="nav-link {{ Request::is('dashboard/roles*') ? 'active' : '' }}"><i class="nav-icon fas fa-user-shield"></i><p>Role</p></a></li>
         <li class="nav-item"><a href="{{ route('organisasi.index') }}" class="nav-link {{ Request::is('dashboard/organisasi*') ? 'active' : '' }}"><i class="nav-icon fas fa-building"></i><p>Organisasi</p></a></li>
