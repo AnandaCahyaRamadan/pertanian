@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{ AuthController, RoleController, TaskController, UserController, VisiController, AboutController, ArticleController, BannerController, BerandaController, DashboardController, DokumenPPIDController, InfografisPPIDController, PegawaiController, OrganisasiController, SocialMediaController, UptExternalController, InovasiLayananController, JadwalAgendaController, JenisPPIDController, JenisProgramAnggaranController, KeahlianController, KerjasamaController, PelatihanController, PenyelenggraPelatihanController, PPIDController, ProgramAnggaranController, SaranaPrasaranaController, SaranaPrasaranaSliderController, SkemaSertifikasiController, TagController };
+use App\Http\Controllers\{ AuthController, RoleController, TaskController, UserController, VisiController, AboutController, ArticleController, BannerController, BerandaController, BeritaController, DashboardController, DokumenPPIDController, InfografisPPIDController, PegawaiController, OrganisasiController, SocialMediaController, UptExternalController, InovasiLayananController, JadwalAgendaController, JenisPPIDController, JenisProgramAnggaranController, KeahlianController, KerjasamaController, PelatihanController, PenyelenggraPelatihanController, PPIDController, ProgramAnggaranController, SaranaPrasaranaController, SaranaPrasaranaSliderController, SkemaSertifikasiController, TagController };
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
@@ -9,6 +9,9 @@ Route::get('/kontak', [BerandaController::class, 'kontak'])->name('kontak');
 Route::get('/pelatihan', [PenyelenggraPelatihanController::class, 'pelatihan']);
 Route::get('/skema-sertifikasi', [PenyelenggraPelatihanController::class, 'skemaSertifikasi']);
 Route::get('/agenda/events', [PenyelenggraPelatihanController::class, 'getEvents'])->name('agenda.events');
+Route::get('/berita', [BeritaController::class, 'index'])->name('berita.index');
+Route::get('/berita/{article}', [BeritaController::class, 'show'])
+    ->name('berita.show');
 
 
 Route::prefix('informasi-publik')->group(function () {

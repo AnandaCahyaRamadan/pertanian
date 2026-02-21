@@ -41,7 +41,7 @@
                 </li>
 
 
-                <li class="nav-item"><a class="nav-link" href="{{url('')}}">Berita</a></li>
+                <li class="nav-item"><a class="nav-link {{ Request::is('berita*') ? 'active' : '' }}" href="{{url('berita')}}">Berita</a></li>
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('pelatihan*') ? 'active' : '' }}" href="{{url('pelatihan')}}" data-voice="Agenda">
                         Agenda</a>
