@@ -10,7 +10,8 @@ use App\Models\SaranaPrasaranaSlider;
 
 class KerjasamaController extends Controller
 {
-    public function programDanKerjasama() {
+    public function programDanKerjasama()
+    {
 
         $programs = ProgramAnggaran::with('jenis')->get();
         $visitorData = VisitorHelper::getFooterAndVisitor();
@@ -21,13 +22,26 @@ class KerjasamaController extends Controller
         ));
     }
 
-    public function SaranaPrasarana() {
+    public function SaranaPrasarana()
+    {
         $sarana_prasarana = SaranaPrasarana::all();
         $sliders = SaranaPrasaranaSlider::all();
         $visitorData = VisitorHelper::getFooterAndVisitor();
 
         return view('profil.sarana_prasarana', array_merge(
-            compact('sarana_prasarana','sliders'),
+            compact('sarana_prasarana', 'sliders'),
+            $visitorData
+        ));
+    }
+    public function detailSarana($id)
+    {
+        $item = SaranaPrasarana::findOrFail($id);
+        // return $sarana_prasarana;
+        $visitorData = VisitorHelper::getFooterAndVisitor();
+
+        // return view('profil.sarana_detail', compact('item'));
+         return view('profil.sarana_detail', array_merge(
+            compact('item'),
             $visitorData
         ));
     }

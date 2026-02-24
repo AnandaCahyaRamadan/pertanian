@@ -20,7 +20,7 @@
 <section class="content">
   <div class="container-fluid">
     <div class="row">
-      
+
       <!-- Jumlah Pelatihan -->
       <div class="col-lg-3 col-6">
         <div class="small-box bg-info">
@@ -88,4 +88,37 @@
     </div>
   </div>
 </section>
+<ol class="breadcrumb float-sm-center">
+
+  <h4>Ulang Tahun Pegawai BBPP Binuang</h4>
+</ol>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+
+      <th>No.</th>
+      <th>Nama</th>
+      <th>Tanggal Lahir</th>
+      <th>Umur Akan Datang</th>
+      <th>Sisa Hari</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach($pegawai as $key => $p)
+    <tr>
+      <td>{{ $key +1 }}</td>
+      <td>{{ $p->name }}</td>
+      <td>{{ $p->tanggal_lahir }}</td>
+      <td>{{ $p->umur_akan_datang }} Tahun</td>
+      <td>
+        @if($p->sisa_hari == 0)
+        🎉 Hari ini
+        @else
+        {{ $p->sisa_hari }}
+        @endif
+      </td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
 @endsection

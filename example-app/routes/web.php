@@ -31,6 +31,8 @@ Route::get('/dasar-hukum', [BerandaController::class, 'dasarhukum'])->name('dasa
 Route::get('/profil-pejabat', [BerandaController::class, 'profilpejabat'])->name('profil_pejabat');
 Route::get('/lhkpn-lhkasn', [BerandaController::class, 'lhkpn'])->name('lhkpn');
 Route::get('/sarana-prasarana', [KerjasamaController::class, 'SaranaPrasarana'])->name('sarana');
+Route::get('/sarana/{id}', [KerjasamaController::class, 'detailSarana'])
+    ->name('sarana.detail');
 Route::get('/struktur-organisasi', [BerandaController::class, 'struktur'])->name('struktur');
 Route::get('/tugas-fungsi', [BerandaController::class, 'tugas'])->name('tugas');
 Route::get('/sejarah', [BerandaController::class, 'sejarah'])->name('sejarah');
@@ -49,6 +51,7 @@ Route::middleware(['auth','role:Admin'])->group(function () {
     // =============================
     // INOVASI LAYANAN
     // =============================
+    
     Route::get('/dashboard/inovasi-layanan', [InovasiLayananController::class, 'index'])->name('inovasi_layanan.index');
     Route::get('/dashboard/inovasi-layanan/create', [InovasiLayananController::class, 'create'])->name('inovasi_layanan.create');
     Route::post('/dashboard/inovasi-layanan/store', [InovasiLayananController::class, 'store'])->name('inovasi_layanan.store');

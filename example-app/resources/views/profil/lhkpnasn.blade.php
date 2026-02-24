@@ -31,11 +31,23 @@
                                     {{ $item->name }}
                                 </h6>
 
-                                <a href="{{ asset('storage/' . $item->file) }}" 
-                                   target="_blank" 
-                                   class="btn btn-warning btn-sm rounded-pill w-100 d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-download me-2"></i> Lihat Dokumen
-                                </a>
+                               <div class="d-flex gap-2">
+
+                                    {{-- Tombol Lihat --}}
+                                    <a href="{{ asset('storage/' . $item->file) }}"
+                                        target="_blank"
+                                        class="btn btn-warning btn-sm rounded-pill d-flex align-items-center">
+                                        <i class="bi bi-eye me-1"></i> Lihat
+                                    </a>
+
+                                    {{-- Tombol Download --}}
+                                    <a href="{{ asset('storage/' . $item->file) }}"
+                                        download
+                                        class="btn btn-success btn-sm rounded-pill d-flex align-items-center">
+                                        <i class="bi bi-download me-1"></i> Download
+                                    </a>
+
+                                </div>
                             </div>
                         </div>
                     </div>

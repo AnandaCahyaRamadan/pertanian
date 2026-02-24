@@ -23,7 +23,7 @@
             <div class="bg-white border rounded-bottom p-4 shadow-sm">
                 <div class="row justify-content-center g-4">
                     @foreach($items as $item)
-                     @if($item->jenis_program_anggaran_id != 7)
+                    @if($item->jenis_program_anggaran_id != 7)
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 hover-card">
                             <div class="card-body text-center">
@@ -31,11 +31,23 @@
                                     {{ $item->name }}
                                 </h6>
 
-                                <a href="{{ asset('storage/' . $item->file) }}" 
-                                   target="_blank" 
-                                   class="btn btn-warning btn-sm rounded-pill w-100 d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-download me-2"></i> Lihat Dokumen
-                                </a>
+                                <div class="d-flex gap-2">
+
+                                    {{-- Tombol Lihat --}}
+                                    <a href="{{ asset('storage/' . $item->file) }}"
+                                        target="_blank"
+                                        class="btn btn-warning btn-sm rounded-pill d-flex align-items-center">
+                                        <i class="bi bi-eye me-1"></i> Lihat
+                                    </a>
+
+                                    {{-- Tombol Download --}}
+                                    <a href="{{ asset('storage/' . $item->file) }}"
+                                        download
+                                        class="btn btn-success btn-sm rounded-pill d-flex align-items-center">
+                                        <i class="bi bi-download me-1"></i> Download
+                                    </a>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -44,7 +56,7 @@
                 </div>
             </div>
         </div>
-                    @endif
+        @endif
 
         @endforeach
     </div>
@@ -54,21 +66,21 @@
 
 @push('scripts')
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const pdfModal = new bootstrap.Modal(document.getElementById('pdfModal'));
-    const pdfViewer = document.getElementById('pdfViewer');
+    document.addEventListener('DOMContentLoaded', function() {
+        const pdfModal = new bootstrap.Modal(document.getElementById('pdfModal'));
+        const pdfViewer = document.getElementById('pdfViewer');
 
-    document.querySelectorAll('.view-pdf').forEach(btn => {
-        btn.addEventListener('click', function () {
-            const fileUrl = this.dataset.file;
-            pdfViewer.src = fileUrl + '#toolbar=0';
-            pdfModal.show();
+        document.querySelectorAll('.view-pdf').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const fileUrl = this.dataset.file;
+                pdfViewer.src = fileUrl + '#toolbar=0';
+                pdfModal.show();
+            });
+        });
+
+        document.getElementById('pdfModal').addEventListener('hidden.bs.modal', function() {
+            pdfViewer.src = '';
         });
     });
-
-    document.getElementById('pdfModal').addEventListener('hidden.bs.modal', function () {
-        pdfViewer.src = '';
-    });
-});
 </script>
 @endpush

@@ -57,35 +57,7 @@
     </div>
 </section>
 
-{{-- === UPT External === --}}
-<section id="upt" class="py-5 bg-light position-relative">
-    <div class="container">
-        <div class="section-title text-center mb-4" data-aos="fade-up">
-            <h2>UPT External</h2>
-        </div>
 
-        <div class="swiper mySwiper mb-4" data-aos="zoom-in">
-            <div class="swiper-wrapper">
-                @foreach($upt_external as $item)
-                <div class="swiper-slide">
-                    <div class="card shadow-sm border-0 text-center m-2 rounded p-2">
-                        <a href="{{ $item->link }}" target="_blank">
-                            <img src="{{ asset('storage/' . $item->image) }}"
-                                class="card-img-top mx-auto"
-                                alt="UPT Image"
-                                style="object-fit: contain;">
-                        </a>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
-
-    <div class="swiper-button-prev custom-nav-btn"><i class="fa-solid fa-chevron-left"></i></div>
-    <div class="swiper-button-next custom-nav-btn"><i class="fa-solid fa-chevron-right"></i></div>
-</section>
 
 {{-- === Sosial Media === --}}
 
@@ -112,11 +84,12 @@
 
             <!-- TikTok -->
             <div class="col-md-4 mb-4 d-flex">
+                tik
                 <blockquote class="tiktok-embed"
                     cite="https://www.tiktok.com/@bbpp.binuang"
                     data-unique-id="bbpp.binuang"
                     data-embed-type="creator"
-                    style="width:100%;max-width:350px;">
+                    style="width:100%;max-width:340px;">
                     <section></section>
                 </blockquote>
             </div>
@@ -126,11 +99,24 @@
                 <div class="fb-page"
                     data-href="https://www.facebook.com/humasbbppbinuang"
                     data-tabs="timeline"
-                    data-width="320"
-                    data-height="435"
+                    data-width="330"
+                    data-height="400"
                     data-small-header="false"
                     data-hide-cover="false"
                     data-show-facepile="true">
+                </div>
+            </div>
+
+            <div class="container mt-5">
+                <div class="text-center mb-4">
+                    <h3 class="fw-bold">YouTube</h3>
+                </div>
+
+                <div class="ratio ratio-16x9 shadow rounded-4 overflow-hidden">
+                    <iframe width="500" height="300" src="https://www.youtube.com/embed/zQjPZpHFPY4?si=U7cgr--qEmI6kV1t"
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+                        clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -165,6 +151,36 @@
             </div>
         </div>
     </div>
+</section>
+
+{{-- === UPT External === --}}
+<section id="upt" class="py-5 bg-light position-relative">
+    <div class="container">
+        <div class="section-title text-center mb-4" data-aos="fade-up">
+            <h2>UPT External</h2>
+        </div>
+
+        <div class="swiper mySwiper mb-4" data-aos="zoom-in">
+            <div class="swiper-wrapper">
+                @foreach($upt_external as $item)
+                <div class="swiper-slide">
+                    <div class="card shadow-sm border-0 text-center m-2 rounded p-2">
+                        <a href="{{ $item->link }}" target="_blank">
+                            <img src="{{ asset('storage/' . $item->image) }}"
+                                class="card-img-top mx-auto"
+                                alt="UPT Image"
+                                style="object-fit: contain;">
+                        </a>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <div class="swiper-button-prev custom-nav-btn"><i class="fa-solid fa-chevron-left"></i></div>
+    <div class="swiper-button-next custom-nav-btn"><i class="fa-solid fa-chevron-right"></i></div>
 </section>
 
 <div id="fb-root"></div>

@@ -12,52 +12,44 @@
         {{-- GRID SARANA --}}
         <div class="row justify-content-center g-4">
             @foreach($sarana_prasarana as $item)
-                <div class="col-lg-4 col-md-6 col-sm-10" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
-                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden hover-card">
-                        <img src="{{ asset('storage/' . $item->image) }}" 
-                             alt="{{ $item->name }}" 
-                             class="card-img-top" 
-                             style="height: 220px; object-fit: cover;">
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden hover-card">
+                    <img src="{{ asset('storage/' . $item->image) }}"
+                        alt="{{ $item->name }}"
+                        class="card-img-top"
+                        style="height: 220px; object-fit: cover;">
 
-                        <div class="card-body text-center">
-                            <h5 class="fw-semibold mb-2">{{ $item->name }}</h5>
-                            @if($item->status)
-                            <span class="badge 
-                                @if($item->status == 'Ready') bg-success 
+                    <div class="card-body text-center">
+                        <h5 class="fw-semibold mb-2">{{ $item->name }}</h5>
+                        @if($item->status)
+                        <span class="badge 
+                                @if($item->status == 'Tersedia') bg-success 
                                 @elseif($item->status == 'Tidak Tersedia') bg-danger 
                                 @else bg-secondary 
                                 @endif
                                 mb-3 px-3 py-2 rounded-pill">
-                                {{ $item->status }}
-                            </span>
-                            @endif
+                            {{ $item->status }}
+                        </span>
+                        @endif
 
-                            @if($item->desc)
-                            <p class="text-muted small text-justify">
-                                {!! Str::limit($item->desc, 110, '...') !!}
-                            </p>
-                            @endif
-                        </div>
+                        @if($item->desc)
+                        <p class="text-muted small text-justify">
+                            {!! Str::limit($item->desc, 110, '...') !!}
+                        </p>
+                        @endif
+                    </div>
 
-                        <div class="card-footer bg-white border-0 pb-4 text-center">
-                            @if($item->wa)
-                            <a href="https://wa.me/{{ preg_replace('/\D/', '', $item->wa) }}" 
-                               target="_blank" 
-                               class="btn btn-success btn-sm rounded-pill px-3 me-2">
-                                <i class="bi bi-whatsapp me-1"></i> Hubungi
+                    <div class="card-footer bg-white border-0 pb-4 text-center">
+
+                            <a href="{{ route('sarana.detail', $item->id) }}"
+                                target="_blank"
+                                class="btn btn-primary btn-sm rounded-pill px-3">
+                                 Detail
                             </a>
-                            @endif
-
-                            @if($item->form_pemesanan)
-                            <a href="{{ $item->form_pemesanan }}" 
-                               target="_blank" 
-                               class="btn btn-warning btn-sm rounded-pill px-3">
-                                <i class="bi bi-file-earmark-text me-1"></i> Form
-                            </a>
-                            @endif
-                        </div>
+                           
                     </div>
                 </div>
+            </div>
             @endforeach
         </div>
 
@@ -66,12 +58,12 @@
             <div class="vertical-slider position-relative overflow-hidden" style="width: 70%; max-width: 700px;">
                 <div class="slider-wrapper position-relative">
                     @foreach ($sliders as $slider)
-                        <div class="slide text-center">
-                            <img src="{{ asset('storage/' . $slider->image) }}" 
-                                class="rounded-4 img-fluid mx-auto d-block" 
-                                style="max-height: 450px; object-fit: cover;" 
-                                alt="slider">
-                        </div>
+                    <div class="slide text-center">
+                        <img src="{{ asset('storage/' . $slider->image) }}"
+                            class="rounded-4 img-fluid mx-auto d-block"
+                            style="max-height: 450px; object-fit: cover;"
+                            alt="slider">
+                    </div>
                     @endforeach
                 </div>
 
@@ -107,7 +99,7 @@
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
-                background: rgba(255,255,255,0.9);
+                background: rgba(255, 255, 255, 0.9);
                 border: none;
                 border-radius: 50%;
                 width: 45px;
@@ -118,11 +110,11 @@
                 cursor: pointer;
                 transition: background 0.3s;
                 z-index: 10;
-                box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
             }
 
             .btn-nav:hover {
-                background: rgba(255,255,255,1);
+                background: rgba(255, 255, 255, 1);
             }
 
             .btn-up {

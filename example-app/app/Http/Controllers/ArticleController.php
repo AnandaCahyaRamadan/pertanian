@@ -50,7 +50,7 @@ class ArticleController extends Controller
             'desc' => $request->desc,
             'view' => 0,
             'category_id' => $request->category_id,
-            'created_by' => auth()->name
+            'created_by' => auth()->user()->id
         ]);
 
         $article->tags()->attach($request->tags);

@@ -508,7 +508,7 @@
             /* uncomment the following line to override widget's z-index property*/
             /* s.setAttribute("data-z-index", 10001);*/
             /* uncomment the following line to enable Live site translations (e.g., fr, de, es, he, nl, etc.)*/
-            /* s.setAttribute("data-site-language", "null");*/
+            s.setAttribute("data-site-language", "null");
             s.setAttribute("data-widget_layout", "full")
             s.setAttribute("data-account", "FYN6Hghdh8");
             s.setAttribute("src", "https://cdn.userway.org/widget.js");
@@ -562,7 +562,7 @@
 
       
         document.addEventListener('click', function() {
-            speak("mode suara aktif");
+            speak("");//suara
         }, {
             once: true
         });
