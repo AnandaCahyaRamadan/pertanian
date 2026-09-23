@@ -2,84 +2,59 @@
 
 @section('content')
 
+<!-- Header Banner -->
+<section class="py-5" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-bottom: 1px solid #bbf7d0;">
+    <div class="container text-center">
+        <span class="section-badge"><i class="bi bi-clock-history"></i> Rekam Jejak Lembaga</span>
+        <h1 class="fw-bold text-dark mt-2 mb-2">Sejarah Singkat</h1>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+            Perjalanan transformasi Balai Besar Pelatihan Pertanian Binuang dari masa ke masa.
+        </p>
+    </div>
+</section>
 
 {{-- === Info Section === --}}
-<section id="info" class="py-5 bg-light">
+<section id="info" class="py-5 bg-white">
     <div class="container">
-        <div class="section-title text-center mb-1" data-aos="fade-up">
-            <h2>Sejarah Singkat</h2>
-        </div>
-
-        <div class="row align-items-start g-4">
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="p-3 bg-white rounded-3 shadow-sm">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5" data-aos="fade-right">
+                <div class="modern-card p-2 border-0 shadow-sm overflow-hidden">
                     <img src="{{ asset('image/sejarah.jpeg') }}"
-                        class="img-fluid rounded-3"
-                        alt="BBPP">
+                        class="img-fluid rounded-4 w-100"
+                        style="max-height: 480px; object-fit: cover;"
+                        alt="Gedung BBPP Binuang">
                 </div>
             </div>
 
-            <div class="col-lg-6" data-aos="fade-left">
-             
-                <div class="sejarah-wrapper" style=" text-align: justify; font-size: 14px;">
-                    <p>
-                        Balai Besar Pelatihan Pertanian (BBPP) Binuang merupakan Unit Pelaksana Teknis (UPT) di bawah
-                        Badan Penyuluhan dan Pengembangan Sumber Daya Manusia Pertanian (BPPSDMP).
-                        Awal berdiri pada tahun 1952 dengan nama Balai Pendidikan Masyarakat Desa (BPMD),
-                        kemudian pada tahun 1953 berubah menjadi Pusat Kursus Pertanian Kalimantan (PKPK).
-                    </p>
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="modern-card p-4 border-0 shadow-sm bg-light">
+                    <h4 class="fw-bold text-dark mb-3"><i class="bi bi-bookmarks-fill text-success me-2"></i> Perjalanan BBPP Binuang</h4>
+                    
+                    <div class="sejarah-wrapper text-muted" style="text-align: justify; line-height: 1.8; font-size: 0.95rem;">
+                        <p>
+                            <strong>Balai Besar Pelatihan Pertanian (BBPP) Binuang</strong> merupakan Unit Pelaksana Teknis (UPT) di bawah Badan Penyuluhan dan Pengembangan Sumber Daya Manusia Pertanian (BPPSDMP) Kementerian Pertanian Republik Indonesia.
+                        </p>
 
-                    <p>
-                        Seiring perkembangan pembangunan pertanian dan peningkatan beban tugas, pada tahun 1969
-                        ditingkatkan menjadi Pusat Pengembangan Pertanian. Pada tahun 1975 statusnya kembali meningkat
-                        berdasarkan SK Menteri Pertanian Nomor 190/Kpts/Org/5/1975 menjadi Pusat Latihan Pertanian (PLP).
-                        Selanjutnya melalui SK Menteri Pertanian Nomor 52/Kpts/Org/1/1978, PLP ditingkatkan fungsinya
-                        menjadi Balai Latihan Pegawai Pertanian (BLPP) Binuang.
-                    </p>
+                        <p>
+                            Awal berdiri pada tahun <strong>1952</strong> dengan nama <em>Balai Pendidikan Masyarakat Desa (BPMD)</em>, kemudian pada tahun <strong>1953</strong> bertransformasi menjadi <em>Pusat Kursus Pertanian Kalimantan (PKPK)</em>.
+                        </p>
 
-                    <p>
-                        Fungsi BLPP kemudian diperluas menjadi Balai Diklat Pertanian (BDP) Binuang melalui
-                        SK Menteri Pertanian Nomor 84/Kpts/OT.210/2/2000 tanggal 29 Februari 2000.
-                        Untuk pengembangan potensi wilayah dan menyesuaikan arah pembangunan pertanian,
-                        diterbitkan SK Menteri Pertanian Nomor 333/Kpts/OT.210/5/2002 tanggal 8 Mei 2002,
-                        yang memberikan tugas pelatihan teknis di bidang perkebunan dan teknologi lahan pasang surut,
-                        sehingga berubah nama menjadi Balai Diklat Agribisnis Perkebunan dan Teknologi Pasang Surut
-                        (BDAPTPS) Binuang.
-                    </p>
+                        <p>
+                            Seiring perkembangan pembangunan pertanian dan peningkatan beban tugas, pada tahun <strong>1969</strong> ditingkatkan menjadi <em>Pusat Pengembangan Pertanian</em>. Pada tahun <strong>1975</strong> statusnya kembali meningkat berdasarkan SK Menteri Pertanian Nomor 190/Kpts/Org/5/1975 menjadi <em>Pusat Latihan Pertanian (PLP)</em>. Selanjutnya melalui SK Menteri Pertanian Nomor 52/Kpts/Org/1/1978, fungsinya ditingkatkan menjadi <em>Balai Latihan Pegawai Pertanian (BLPP) Binuang</em>.
+                        </p>
 
-                    <p>
-                        Melalui Peraturan Menteri Pertanian RI Nomor 18/Permentan/OT.140/2/2007 tanggal 19 Februari 2007,
-                        eselonering ditingkatkan menjadi II-b dengan perubahan nama menjadi Balai Besar Pelatihan Pertanian
-                        (BBPP) Binuang, dengan tugas melaksanakan dan mengembangkan teknik pelatihan teknis, fungsional,
-                        dan kewirausahaan di bidang pertanian bagi aparatur dan nonaparatur.
-                    </p>
+                        <p>
+                            Fungsi BLPP diperluas menjadi <em>Balai Diklat Pertanian (BDP) Binuang</em> pada tahun <strong>2000</strong>, dan kemudian pada tahun <strong>2002</strong> disesuaikan menjadi <em>Balai Diklat Agribisnis Perkebunan dan Teknologi Pasang Surut (BDAPTPS) Binuang</em>.
+                        </p>
 
-                    <p>
-                        Pada tahun 2013, tugas BBPP Binuang disempurnakan melalui Peraturan Menteri Pertanian
-                        Nomor 104/Permentan/OT.140/10/2013 tanggal 9 Oktober 2013, yaitu melaksanakan pelatihan fungsional
-                        bagi aparatur, pelatihan teknis dan profesi, serta pengembangan model dan teknik pelatihan
-                        fungsional dan teknis bidang pertanian bagi aparatur dan nonaparatur pertanian.
-                    </p>
-
-                    <p>
-                        Wilayah kerja BBPP Binuang meliputi Provinsi Kalimantan Selatan, Kalimantan Tengah,
-                        Kalimantan Barat, Kalimantan Timur, dan Kalimantan Utara.
-                    </p>
+                        <p>
+                            Melalui Peraturan Menteri Pertanian RI Nomor 18/Permentan/OT.140/2/2007 tanggal 19 Februari 2007, eselonering ditingkatkan menjadi <strong>Eselon II-b</strong> dengan nama <strong>Balai Besar Pelatihan Pertanian (BBPP) Binuang</strong>, dengan mandat wilayah kerja di 5 Provinsi di seluruh Kalimantan.
+                        </p>
+                    </div>
                 </div>
-
-
-
-
             </div>
         </div>
     </div>
 </section>
 
-
-
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"
-    nonce="FBSDK"></script>
 @endsection

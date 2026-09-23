@@ -2,37 +2,38 @@
 
 @section('content')
 
+<!-- Header Banner -->
+<section class="py-5" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-bottom: 1px solid #bbf7d0;">
+    <div class="container text-center">
+        <span class="section-badge"><i class="bi bi-compass"></i> Arah & Tujuan</span>
+        <h1 class="fw-bold text-dark mt-2 mb-2">Visi & Misi</h1>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+            Komitmen dan arah strategis BBPP Binuang dalam mencetak SDM pertanian yang unggul, profesional, dan berdaya saing.
+        </p>
+    </div>
+</section>
 
 {{-- === Info Section === --}}
-<section id="info" class="py-5 bg-light">
+<section id="info" class="py-5 bg-white">
     <div class="container">
-        <div class="section-title text-center mb-5" data-aos="fade-up">
-            <h2>VISI MISI</h2>
-        </div>
-
-        <div class="row align-items-start g-4">
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="p-3 bg-white rounded-3 shadow-sm">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5" data-aos="fade-right">
+                <div class="modern-card p-2 border-0 shadow-sm overflow-hidden">
                     <img src="{{ asset('image/balaibesar.png') }}"
-                        class="img-fluid rounded-3"
+                        class="img-fluid rounded-4 w-100"
                         alt="BBPP Binuang">
                 </div>
             </div>
 
-            <div class="col-lg-6" data-aos="fade-left">
-
-                <p>{!! $visi->desc ?? 'Belum ada data yang tersedia.' !!}</p>
-
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="modern-card p-4 border-0 shadow-sm bg-light">
+                    <div class="visi-misi-content" style="line-height: 1.8; font-size: 1rem;">
+                        {!! $visi->desc ?? '<p class="text-muted">Belum ada data yang tersedia.</p>' !!}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-
-
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"
-    nonce="FBSDK"></script>
 @endsection
