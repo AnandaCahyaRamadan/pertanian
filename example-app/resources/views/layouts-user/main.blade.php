@@ -631,6 +631,19 @@
     <script async src="https://www.instagram.com/embed.js"></script>
     <script async src="https://www.tiktok.com/embed.js"></script>
 
+    <!-- UserWay Accessibility Widget -->
+    <script>
+        (function(d) {
+            var s = d.createElement("script");
+            s.setAttribute("data-position", 2);
+            s.setAttribute("data-color", "#157347");
+            s.setAttribute("data-account", "FYN6Hghdh8");
+            s.setAttribute("src", "https://cdn.userway.org/widget.js");
+            (d.body || d.head).appendChild(s);
+        })(document);
+    </script>
+    <noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+
 </body>
 
 </html>
